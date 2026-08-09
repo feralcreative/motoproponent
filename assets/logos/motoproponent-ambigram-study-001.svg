@@ -1,0 +1,143 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1680" height="1605" viewBox="0 0 1680 1605"><rect width="1680" height="1605" fill="#FAF8F5"/><defs><g id="half-final">
+<path d="M0,134 H846" fill="none" stroke="#14110E" stroke-width="9" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4"/>
+<path d="M8,134 V6 L59,76 L110,6 V134" fill="none" stroke="#14110E" stroke-width="16" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4"/>
+<path d="M59,76 V134" fill="none" stroke="#14110E" stroke-width="16" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4"/>
+<path d="M152,30 V110" fill="none" stroke="#14110E" stroke-width="16" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4"/>
+<path d="M236,30 V110" fill="none" stroke="#14110E" stroke-width="16" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4"/>
+<path d="M152,30 C152,-4 236,-4 236,30" fill="none" stroke="#14110E" stroke-width="11" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4"/>
+<path d="M152,110 C152,144 236,144 236,110" fill="none" stroke="#14110E" stroke-width="11" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4"/>
+<path d="M152,30 L236,110" fill="none" stroke="#14110E" stroke-width="16" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4"/>
+<path d="M268,14 H360" fill="none" stroke="#14110E" stroke-width="16" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4"/>
+<path d="M326,14 V134" fill="none" stroke="#14110E" stroke-width="16" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4"/>
+<path d="M276,70 H326" fill="none" stroke="#14110E" stroke-width="11" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4"/>
+<path d="M392,30 V110" fill="none" stroke="#14110E" stroke-width="16" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4"/>
+<path d="M476,30 V110" fill="none" stroke="#14110E" stroke-width="16" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4"/>
+<path d="M392,30 C392,-4 476,-4 476,30" fill="none" stroke="#14110E" stroke-width="11" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4"/>
+<path d="M392,110 C392,144 476,144 476,110" fill="none" stroke="#14110E" stroke-width="11" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4"/>
+<path d="M392,30 L476,110" fill="none" stroke="#14110E" stroke-width="16" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4"/>
+<path d="M508,6 V134" fill="none" stroke="#14110E" stroke-width="16" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4"/>
+<path d="M508,14 C562,14 590,27 590,52 C590,77 562,90 508,90" fill="none" stroke="#14110E" stroke-width="16" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4"/>
+<path d="M628,6 V134" fill="none" stroke="#14110E" stroke-width="16" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4"/>
+<path d="M628,14 C682,14 708,26 708,50 C708,74 682,86 628,86" fill="none" stroke="#14110E" stroke-width="16" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4"/>
+<path d="M674,86 L712,134" fill="none" stroke="#14110E" stroke-width="16" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4"/>
+<path d="M712,6 V134" fill="none" stroke="#14110E" stroke-width="11" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4"/>
+<path d="M754,30 V110" fill="none" stroke="#14110E" stroke-width="16" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4"/>
+<path d="M838,30 V110" fill="none" stroke="#14110E" stroke-width="16" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4"/>
+<path d="M754,30 C754,-4 838,-4 838,30" fill="none" stroke="#14110E" stroke-width="11" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4"/>
+<path d="M754,110 C754,144 838,144 838,110" fill="none" stroke="#14110E" stroke-width="11" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4"/>
+<path d="M754,30 L838,110" fill="none" stroke="#14110E" stroke-width="16" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4"/>
+</g><g id="half-diag">
+<path d="M0,134 H846" fill="none" stroke="#C8452F" stroke-width="9" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4"/>
+<path d="M8,134 V6 L59,76 L110,6 V134" fill="none" stroke="#14110E" stroke-width="16" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4"/>
+<path d="M59,76 V134" fill="none" stroke="#14110E" stroke-width="16" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4"/>
+<path d="M152,30 V110" fill="none" stroke="#14110E" stroke-width="16" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4"/>
+<path d="M236,30 V110" fill="none" stroke="#14110E" stroke-width="16" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4"/>
+<path d="M152,30 C152,-4 236,-4 236,30" fill="none" stroke="#7A736B" stroke-width="11" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4"/>
+<path d="M152,110 C152,144 236,144 236,110" fill="none" stroke="#7A736B" stroke-width="11" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4"/>
+<path d="M152,30 L236,110" fill="none" stroke="#14110E" stroke-width="16" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4"/>
+<path d="M268,14 H360" fill="none" stroke="#14110E" stroke-width="16" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4"/>
+<path d="M326,14 V134" fill="none" stroke="#14110E" stroke-width="16" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4"/>
+<path d="M276,70 H326" fill="none" stroke="#7A736B" stroke-width="11" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4"/>
+<path d="M392,30 V110" fill="none" stroke="#14110E" stroke-width="16" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4"/>
+<path d="M476,30 V110" fill="none" stroke="#14110E" stroke-width="16" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4"/>
+<path d="M392,30 C392,-4 476,-4 476,30" fill="none" stroke="#7A736B" stroke-width="11" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4"/>
+<path d="M392,110 C392,144 476,144 476,110" fill="none" stroke="#7A736B" stroke-width="11" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4"/>
+<path d="M392,30 L476,110" fill="none" stroke="#14110E" stroke-width="16" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4"/>
+<path d="M508,6 V134" fill="none" stroke="#14110E" stroke-width="16" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4"/>
+<path d="M508,14 C562,14 590,27 590,52 C590,77 562,90 508,90" fill="none" stroke="#14110E" stroke-width="16" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4"/>
+<path d="M628,6 V134" fill="none" stroke="#14110E" stroke-width="16" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4"/>
+<path d="M628,14 C682,14 708,26 708,50 C708,74 682,86 628,86" fill="none" stroke="#14110E" stroke-width="16" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4"/>
+<path d="M674,86 L712,134" fill="none" stroke="#14110E" stroke-width="16" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4"/>
+<path d="M712,6 V134" fill="none" stroke="#7A736B" stroke-width="11" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4"/>
+<path d="M754,30 V110" fill="none" stroke="#14110E" stroke-width="16" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4"/>
+<path d="M838,30 V110" fill="none" stroke="#14110E" stroke-width="16" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4"/>
+<path d="M754,30 C754,-4 838,-4 838,30" fill="none" stroke="#7A736B" stroke-width="11" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4"/>
+<path d="M754,110 C754,144 838,144 838,110" fill="none" stroke="#7A736B" stroke-width="11" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4"/>
+<path d="M754,30 L838,110" fill="none" stroke="#14110E" stroke-width="16" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4"/>
+</g><g id="roundel">
+<path d="M0,134 H100" fill="none" stroke="#14110E" stroke-width="9" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4"/>
+<path d="M58,30 V110" fill="none" stroke="#14110E" stroke-width="16" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4"/>
+<path d="M142,30 V110" fill="none" stroke="#14110E" stroke-width="16" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4"/>
+<path d="M58,30 C58,-4 142,-4 142,30" fill="none" stroke="#14110E" stroke-width="11" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4"/>
+<path d="M58,110 C58,144 142,144 142,110" fill="none" stroke="#14110E" stroke-width="11" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4"/>
+<path d="M58,30 L142,110" fill="none" stroke="#14110E" stroke-width="16" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4"/>
+</g></defs><text x="44" y="58" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="30" fill="#14110E" text-anchor="start" font-weight="700" letter-spacing="0.28em">MOTOPROPONENT</text>
+<text x="44" y="84" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="12" fill="#8E8880" text-anchor="start" font-weight="400" letter-spacing="0.14em">180&#176; ROTATIONAL AMBIGRAM &#8212; STUDY SHEET / GEOMETRIC SANS</text>
+<text x="44" y="104" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="12" fill="#8E8880" text-anchor="start" font-weight="400" letter-spacing="0.14em">authored as one half + its own rotation &#183; the right half of this word does not exist as artwork</text>
+<text x="44" y="150" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="12" fill="#14110E" text-anchor="start" font-weight="700" letter-spacing="0.14em">THE MARK</text>
+<text x="44" y="168" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="11" fill="#8E8880" text-anchor="start" font-weight="400" letter-spacing="0.14em">monotone, as it would actually be used</text>
+<g transform="translate(44,194)"><use xlink:href="#half-final"/><use xlink:href="#half-final" transform="rotate(180,796.0,70)"/></g>
+<text x="44" y="388" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="12" fill="#14110E" text-anchor="start" font-weight="700" letter-spacing="0.14em">THE SAME ARTWORK, ROTATED 180&#176;</text>
+<text x="44" y="406" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="11" fill="#8E8880" text-anchor="start" font-weight="400" letter-spacing="0.14em">identical to the row above, pixel for pixel &#8212; that is what makes it an ambigram</text>
+<g transform="translate(44,432) rotate(180,796.0,70)"><use xlink:href="#half-final"/><use xlink:href="#half-final" transform="rotate(180,796.0,70)"/></g>
+<text x="44" y="626" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="12" fill="#14110E" text-anchor="start" font-weight="700" letter-spacing="0.14em">STROKE ROLES</text>
+<text x="44" y="644" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="11" fill="#8E8880" text-anchor="start" font-weight="400" letter-spacing="0.14em">black = primary letterform &#183; grey = secondary &#183; red = rule motif</text>
+<g transform="translate(44,670)"><use xlink:href="#half-diag"/><use xlink:href="#half-diag" transform="rotate(180,796.0,70)"/></g>
+<text x="103.0" y="662" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="12" fill="#14110E" text-anchor="middle" font-weight="700" letter-spacing="0.14em">M</text>
+<text x="103.0" y="830" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="12" fill="#C8452F" text-anchor="middle" font-weight="700" letter-spacing="0.14em">T</text>
+<line x1="44" y1="840" x2="162" y2="840" stroke="#DCD7CF"/>
+<text x="238.0" y="662" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="12" fill="#14110E" text-anchor="middle" font-weight="700" letter-spacing="0.14em">O</text>
+<text x="238.0" y="830" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="12" fill="#C8452F" text-anchor="middle" font-weight="700" letter-spacing="0.14em">N</text>
+<line x1="188" y1="840" x2="288" y2="840" stroke="#DCD7CF"/>
+<text x="358.0" y="662" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="12" fill="#14110E" text-anchor="middle" font-weight="700" letter-spacing="0.14em">T</text>
+<text x="358.0" y="830" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="12" fill="#C8452F" text-anchor="middle" font-weight="700" letter-spacing="0.14em">E</text>
+<line x1="312" y1="840" x2="404" y2="840" stroke="#DCD7CF"/>
+<text x="478.0" y="662" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="12" fill="#14110E" text-anchor="middle" font-weight="700" letter-spacing="0.14em">O</text>
+<text x="478.0" y="830" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="12" fill="#C8452F" text-anchor="middle" font-weight="700" letter-spacing="0.14em">N</text>
+<line x1="428" y1="840" x2="528" y2="840" stroke="#DCD7CF"/>
+<text x="592.0" y="662" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="12" fill="#14110E" text-anchor="middle" font-weight="700" letter-spacing="0.14em">P</text>
+<text x="592.0" y="830" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="12" fill="#C8452F" text-anchor="middle" font-weight="700" letter-spacing="0.14em">O</text>
+<line x1="544" y1="840" x2="640" y2="840" stroke="#DCD7CF"/>
+<text x="714.0" y="662" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="12" fill="#14110E" text-anchor="middle" font-weight="700" letter-spacing="0.14em">R</text>
+<text x="714.0" y="830" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="12" fill="#C8452F" text-anchor="middle" font-weight="700" letter-spacing="0.14em">P</text>
+<line x1="664" y1="840" x2="764" y2="840" stroke="#DCD7CF"/>
+<text x="840.0" y="662" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="12" fill="#14110E" text-anchor="middle" font-weight="700" letter-spacing="0.14em">O</text>
+<text x="840.0" y="830" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="12" fill="#C8452F" text-anchor="middle" font-weight="700" letter-spacing="0.14em">O</text>
+<line x1="790" y1="840" x2="890" y2="840" stroke="#DCD7CF"/>
+<text x="966.0" y="662" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="12" fill="#14110E" text-anchor="middle" font-weight="700" letter-spacing="0.14em">P</text>
+<text x="966.0" y="830" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="12" fill="#C8452F" text-anchor="middle" font-weight="700" letter-spacing="0.14em">R</text>
+<line x1="916" y1="840" x2="1016" y2="840" stroke="#DCD7CF"/>
+<text x="1088.0" y="662" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="12" fill="#14110E" text-anchor="middle" font-weight="700" letter-spacing="0.14em">O</text>
+<text x="1088.0" y="830" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="12" fill="#C8452F" text-anchor="middle" font-weight="700" letter-spacing="0.14em">P</text>
+<line x1="1040" y1="840" x2="1136" y2="840" stroke="#DCD7CF"/>
+<text x="1202.0" y="662" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="12" fill="#14110E" text-anchor="middle" font-weight="700" letter-spacing="0.14em">N</text>
+<text x="1202.0" y="830" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="12" fill="#C8452F" text-anchor="middle" font-weight="700" letter-spacing="0.14em">O</text>
+<line x1="1152" y1="840" x2="1252" y2="840" stroke="#DCD7CF"/>
+<text x="1322.0" y="662" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="12" fill="#14110E" text-anchor="middle" font-weight="700" letter-spacing="0.14em">E</text>
+<text x="1322.0" y="830" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="12" fill="#C8452F" text-anchor="middle" font-weight="700" letter-spacing="0.14em">T</text>
+<line x1="1276" y1="840" x2="1368" y2="840" stroke="#DCD7CF"/>
+<text x="1442.0" y="662" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="12" fill="#14110E" text-anchor="middle" font-weight="700" letter-spacing="0.14em">N</text>
+<text x="1442.0" y="830" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="12" fill="#C8452F" text-anchor="middle" font-weight="700" letter-spacing="0.14em">O</text>
+<line x1="1392" y1="840" x2="1492" y2="840" stroke="#DCD7CF"/>
+<text x="1577.0" y="662" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="12" fill="#14110E" text-anchor="middle" font-weight="700" letter-spacing="0.14em">T</text>
+<text x="1577.0" y="830" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="12" fill="#C8452F" text-anchor="middle" font-weight="700" letter-spacing="0.14em">M</text>
+<line x1="1518" y1="840" x2="1636" y2="840" stroke="#DCD7CF"/>
+<text x="44" y="864" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="11" fill="#8E8880" text-anchor="start" font-weight="400" letter-spacing="0.14em">top row: what the position reads upright &#183; bottom row: what the SAME artwork reads rotated</text>
+<text x="44" y="894" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="12" fill="#14110E" text-anchor="start" font-weight="700" letter-spacing="0.14em">SIZE TEST</text>
+<text x="44" y="912" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="11" fill="#8E8880" text-anchor="start" font-weight="400" letter-spacing="0.14em">an ambigram that only works at full width is not finished</text>
+<g transform="translate(44,934) scale(0.5150753768844221)"><use xlink:href="#half-final"/><use xlink:href="#half-final" transform="rotate(180,796.0,70)"/></g>
+<text x="888" y="978.7085427135678" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="10" fill="#8E8880" text-anchor="start" font-weight="400" letter-spacing="0.14em">820px wide</text>
+<g transform="translate(44,1032.110552763819) scale(0.2701005025125628)"><use xlink:href="#half-final"/><use xlink:href="#half-final" transform="rotate(180,796.0,70)"/></g>
+<text x="498" y="1055.5552763819094" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="10" fill="#8E8880" text-anchor="start" font-weight="400" letter-spacing="0.14em">430px wide</text>
+<g transform="translate(44,1095.9246231155778) scale(0.1507537688442211)"><use xlink:href="#half-final"/><use xlink:href="#half-final" transform="rotate(180,796.0,70)"/></g>
+<text x="308" y="1109.0100502512562" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="10" fill="#8E8880" text-anchor="start" font-weight="400" letter-spacing="0.14em">240px wide</text>
+<text x="44" y="1173.0301507537688" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="12" fill="#14110E" text-anchor="start" font-weight="700" letter-spacing="0.14em">SMALL-SIZE SIBLING</text>
+<text x="44" y="1191.0301507537688" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="11" fill="#8E8880" text-anchor="start" font-weight="400" letter-spacing="0.14em">pivot O + rule motif, cropped square &#8212; self-rotational, so it is its own ambigram</text>
+<rect x="44" y="1217.0301507537688" width="168" height="168" fill="none" stroke="#DCD7CF"/>
+<g transform="translate(44,1217.0301507537688) scale(0.84)"><g transform="translate(0,30.0)"><use xlink:href="#roundel"/><use xlink:href="#roundel" transform="rotate(180,100,70)"/></g></g>
+<text x="44" y="1403.0301507537688" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="10" fill="#8E8880" text-anchor="start" font-weight="400" letter-spacing="0.14em">168px</text>
+<rect x="252" y="1217.0301507537688" width="96" height="96" fill="none" stroke="#DCD7CF"/>
+<g transform="translate(252,1217.0301507537688) scale(0.48)"><g transform="translate(0,30.0)"><use xlink:href="#roundel"/><use xlink:href="#roundel" transform="rotate(180,100,70)"/></g></g>
+<text x="252" y="1331.0301507537688" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="10" fill="#8E8880" text-anchor="start" font-weight="400" letter-spacing="0.14em">96px</text>
+<rect x="388" y="1217.0301507537688" width="56" height="56" fill="none" stroke="#DCD7CF"/>
+<g transform="translate(388,1217.0301507537688) scale(0.28)"><g transform="translate(0,30.0)"><use xlink:href="#roundel"/><use xlink:href="#roundel" transform="rotate(180,100,70)"/></g></g>
+<text x="388" y="1291.0301507537688" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="10" fill="#8E8880" text-anchor="start" font-weight="400" letter-spacing="0.14em">56px</text>
+<rect x="484" y="1217.0301507537688" width="32" height="32" fill="none" stroke="#DCD7CF"/>
+<g transform="translate(484,1217.0301507537688) scale(0.16)"><g transform="translate(0,30.0)"><use xlink:href="#roundel"/><use xlink:href="#roundel" transform="rotate(180,100,70)"/></g></g>
+<text x="484" y="1267.0301507537688" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="10" fill="#8E8880" text-anchor="start" font-weight="400" letter-spacing="0.14em">32px</text>
+<line x1="44" y1="1435.0301507537688" x2="1636" y2="1435.0301507537688" stroke="#DCD7CF"/>
+<text x="44" y="1463.0301507537688" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="12" fill="#14110E" text-anchor="start" font-weight="700" letter-spacing="0.14em">STILL OPEN</text>
+<text x="44" y="1485.0301507537688" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="11" fill="#8E8880" text-anchor="start" font-weight="400" letter-spacing="0.14em">&#8226; M / T &#8212; structurally unsolvable at 1:1. Full-height edge stems rotate to full-height edge stems, and the T has none. Carried by context + the rule motif.</text>
+<text x="44" y="1505.0301507537688" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="11" fill="#8E8880" text-anchor="start" font-weight="400" letter-spacing="0.14em">&#8226; R / P &#8212; same handedness, same wall. The right-hand rule gives the P a stem; the bowl still lands in the wrong half. Carried by context.</text>
+<text x="44" y="1525.0301507537688" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="11" fill="#8E8880" text-anchor="start" font-weight="400" letter-spacing="0.14em">&#8226; O / N &#8212; N is intrinsically 180&#176;-symmetric, so this pair really does want one picture. Long straight sides + light curves push it off &#216; and toward N.</text>
+<text x="44" y="1545.0301507537688" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="11" fill="#8E8880" text-anchor="start" font-weight="400" letter-spacing="0.14em">&#8226; P / O &#8212; rotates to a lowercase o with a post on its right. Tighten gap 4-5 further to ligature that post into p10's stem.</text></svg>

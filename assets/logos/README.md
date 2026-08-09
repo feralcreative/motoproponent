@@ -1,21 +1,14 @@
 # MOTOPROPONENT — 180° Rotational Ambigram
 
-Design notes, construction logic, and build instructions for the MOTOPROPONENT
-ambigram lockup.
+Design notes, construction logic, and build instructions for the MOTOPROPONENT ambigram lockup.
 
-**TL;DR** — MOTOPROPONENT is an unusually good ambigram candidate: it has an odd
-letter count with a rotationally symmetric letter (`O`) sitting exactly in the
-middle, and its letter pairs collapse down to **five unique glyphs** for thirteen
-letters. Three of those five are clean. Two (`M/T` and `R/P`) are compromises,
-and one of them (`R/P`) is provably not solvable by naive means — see
-[The handedness problem](#the-handedness-problem).
+**TL;DR** — MOTOPROPONENT looks like an unusually good ambigram candidate: odd letter count, a rotationally symmetric `O` sitting exactly in the middle, heavy letter reuse. It is not. Three of its six letter pairs are structurally obstructed rather than merely hard, and the obstructions are proved below rather than asserted. What that buys you is a known ceiling: the strict one-ink mark will always be a "you have to be told what it says" wordmark. See [Where it breaks](#4-where-it-breaks).
 
----
+There are therefore **two marks in this folder**, built by two generators. The **flat ambigram** is one artwork read two ways, and it lives with that ceiling. The **duotone lockup** spends colour instead of legibility: it overlays the word with its own rotation in a second ink, so every letter in both readings is drawn correctly and nothing is carried by context. See [The duotone route](#10-the-duotone-route).
 
 ## 1. What kind of ambigram this is
 
-An **ambigram** is a piece of lettering that stays readable under some
-transformation. The main families:
+An **ambigram** is a piece of lettering that stays readable under some transformation. The main families:
 
 | Type | Transformation | Notes |
 | --- | --- | --- |
@@ -25,327 +18,281 @@ transformation. The main families:
 | Chain / tessellation | Repeats infinitely | Different problem entirely. |
 | Figure-ground | Reads in the negative space | Not applicable to a 13-letter word. |
 
-We chose **180° rotational** because the word's structure hands it to you (see
-next section). A mirror ambigram of the same word would be substantially harder:
-mirroring flips `N → И`, `E → Ǝ`, `P → ꟼ`, `R → Я`, and unlike rotation there's no
-"centre letter" trick to exploit.
+We chose **180° rotational** because the word's structure appears to hand it to you. A mirror ambigram of the same word would be substantially harder: mirroring flips `N → И`, `E → Ǝ`, `P → ꟼ`, `R → Я`, and unlike rotation there's no centre-letter trick to exploit.
 
----
+## 2. The pairing rule
 
-## 2. Why this word works
+In a 180° rotational ambigram, turning the artwork over lands the **first** letter where the **last** letter was. So for an `n`-letter word, letter `i` must be the 180° rotation of letter `n + 1 − i`.
 
-### The pairing rule
-
-In a 180° rotational ambigram, when you turn the artwork over, the **first**
-letter lands where the **last** letter was. So for an `n`-letter word, letter `i`
-must be the 180° rotation of letter `n + 1 − i`.
-
-MOTOPROPONENT is 13 letters:
-
-```
+```text
 position:   1  2  3  4  5  6  7  8  9 10 11 12 13
 letter:     M  O  T  O  P  R  O  P  O  N  E  N  T
             └──────────────────┐│┌──────────────────┘
                           pairs across the centre
 ```
 
-Which gives:
+Which gives six pairs plus a free centre:
 
-| Positions | Pair | Difficulty |
+| Positions | Pair | Status |
 | --- | --- | --- |
-| 1 ↔ 13 | **M / T** | Hard |
-| 2 ↔ 12 | **O / N** | Easy |
-| 3 ↔ 11 | **T / E** | Moderate |
-| 4 ↔ 10 | **O / N** | *(same glyph as 2↔12)* |
-| 5 ↔ 9 | **P / O** | Moderate |
-| 6 ↔ 8 | **R / P** | Hardest |
+| 1 ↔ 13 | **M / T** | Obstructed – see §4 |
+| 2 ↔ 12 | **O / N** | Obstructed – see §4 |
+| 3 ↔ 11 | **T / E** | Solved |
+| 4 ↔ 10 | **O / N** | *(same problem as 2 ↔ 12)* |
+| 5 ↔ 9 | **P / O** | Solved, with a residue stroke |
+| 6 ↔ 8 | **R / P** | Obstructed – see §4 |
 | 7 | **O** (its own partner) | Free |
 
-### Two pieces of luck
-
-1. **Odd letter count.** Position 7 has no partner — it must rotate onto
-   *itself*. That's fatal for most letters, but position 7 is **O**, which is
-   already rotationally symmetric. Free win. (Had the centre letter been, say,
-   `R`, the whole approach would need rethinking.)
-
-2. **Massive glyph reuse.** `O/N` appears twice, and the centre `O` can reuse the
-   same glyph a third time (in two orientations, so five instances total). Net
-   result: **13 letters, 5 drawings.**
-
-   ```
-   G_MT   used at positions  1, 13
-   G_ON   used at positions  2,  4,  7, 10, 12
-   G_TE   used at positions  3, 11
-   G_PO   used at positions  5,  9
-   G_RP   used at positions  6,  8
-   ```
-
----
+Position 7 has no partner, so it must rotate onto *itself*. That is fatal for most letters, but position 7 is `O`, which is already rotationally symmetric. It is the one piece of genuine luck in the word, and it is the pivot the whole mark turns on.
 
 ## 3. The method
 
+### Author one half, generate the other
+
+The artwork is authored **once**, for the left half of the word plus the pivot letter, in a single word-space coordinate system. The right half is never drawn. It is the authored half rotated 180° about the lockup centre:
+
+```xml
+<use xlink:href="#half"/>
+<use xlink:href="#half" transform="rotate(180, CX, CY)"/>
+```
+
+The mark is therefore rotationally symmetric **by construction**. There is no second copy of anything to quietly fix up, and the "rotated" row on the study sheet is pixel-identical to the upright one, which is precisely what a 180° ambigram is.
+
+This replaces the earlier approach (studies 000 and before) of drawing five self-contained glyphs and placing them on a palindromic width grid. What the change buys:
+
+- **No palindromic width grid.** Advances and tracking are declared once in a table; the mirror side inherits them automatically. Widths are free.
+- **No self-contained glyphs.** A stroke may begin inside one letter and end inside the next, so ligatures and connective strokes cost nothing.
+- **Symmetry cannot drift.** Previously the two halves were separate artwork that happened to agree. Now disagreement is not representable.
+
 ### Skeleton-first, not outline-first
 
-The glyphs are built as **centreline strokes** (SVG `<path>` with `stroke-width`),
-not as filled outlines. Reasons:
-
-- A clean geometric sans is, structurally, uniform-weight strokes made of straight
-  lines and circular arcs. Skeletons model that directly.
-- Ambigram work is iterative — you nudge a vertex, check the rotation, nudge
-  again. Editing two numbers in a `d` attribute is much faster than pushing
-  bezier handles on an outlined form.
-- Stroke weight becomes a *tunable*, which turns out to be the main lever for
-  making the compromised pairs read (see §5).
-
-When the geometry is settled, outline the strokes in Illustrator
-(`Object → Path → Outline Stroke`) and take over by hand from there.
+Glyphs are **centreline strokes** (SVG `<path>` with `stroke-width`), not filled outlines. A clean geometric sans is structurally uniform-weight strokes made of straight lines and arcs, so skeletons model it directly, and editing two numbers in a `d` attribute beats pushing bezier handles when you are iterating. When the geometry settles, outline the strokes in Illustrator (`Object → Path → Outline Stroke`) and take over by hand.
 
 ### The rotation maths
 
-Every glyph lives in a box `0..w` wide by `0..140` tall, with cap height running
-`y = 6` (top) to `y = 134` (baseline). Rotation happens about the box centre
-`(w/2, 70)`:
+Everything lives on a 140-unit metric with cap height running `y = 6` (cap line) to `y = 134` (baseline). Rotation happens about the lockup centre `(LW/2, 70)`:
 
-```
-(x, y)  →  (w − x, 140 − y)
+```text
+(x, y)  →  (LW − x, 140 − y)
 ```
 
 Four consequences drive every decision in this project:
 
-1. **Horizontals swap top for bottom.** A bar at the cap line becomes a bar at the
-   baseline. *This is what makes `M/T` possible* — the rule under the M becomes
-   the crossbar over the T.
-2. **Verticals swap left for right,** *unless* they sit at `x = w/2`, in which case
-   they map onto themselves. A centred stem is therefore the most valuable stroke
-   in an ambigram: it costs you nothing in either orientation. Both `M/T` and
-   `T/E` are built around one.
-3. **Handedness flips.** Anything on the left ends up on the right. This is the
-   whole reason `R/P` is hard.
-4. **Diagonals stay diagonal at the same angle** but swap quadrants, so a `\`
-   stays a `\`. This is why the `O/N` diagonal maps onto itself perfectly.
+1. **Horizontals swap top for bottom.** A bar at the cap line becomes a bar at the baseline. This is what the rule motif exploits.
+2. **Verticals swap left for right,** *unless* they sit on the centre line, in which case they map onto themselves.
+3. **Handedness flips.** Anything on the left ends up on the right. This is why `R/P` is obstructed.
+4. **Diagonals keep their angle** but swap quadrants, so a `\` stays a `\`.
 
-### Proving it, rather than eyeballing it
+### What weight can and cannot do
 
-The bottom two rows of the construction sheet are the honesty check. The upright
-lockup is a group of `<use>` references. The "rotated" lockup is **the identical
-group** with `rotate(180)` applied:
+**Weight is orientation-invariant.** A heavy stroke is heavy in both readings. You therefore *cannot* use weight to make a stroke dominate upright and recede when rotated — it only sorts strokes into primary, secondary and rule globally.
 
-```xml
-<g transform="translate(40,Y) scale(S) rotate(180, LW/2, 70)"> …same content… </g>
-```
+This corrects the earlier design note claiming the `M`'s residue was "drawn lighter so the `T`'s silhouette dominates". Those strokes are also the `M`'s defining strokes, so lightening them for the `T`'s benefit is exactly why the `M` stopped reading. The levers that genuinely differ between orientations are position relative to the cap and base lines, immediate context, and whether a stroke connects into its neighbour.
 
-Nothing is redrawn, re-kerned, or quietly fixed up. If the artwork reads upside
-down on that sheet, it will read upside down on a t-shirt.
+<!--| PAGE-BREAK -->
 
-This also constrains the layout: for the lockup as a whole to be rotationally
-symmetric, the glyph widths must be palindromic (`w₁ = w₁₃`, `w₂ = w₁₂`, …) and
-the tracking must be uniform (or itself palindromic). Both hold here because
-positions `i` and `14 − i` literally share a glyph definition.
+## 4. Where it breaks
 
----
+Three of the six pairs are obstructed by the geometry of rotation, not by lack of skill. Knowing *why* is what stops you burning passes on them.
 
-## 4. Glyph-by-glyph rationale
+### `M / T` — full-height edge stems
 
-### `G_ON` — O ↔ N *(easy, and it does the most work)*
+An `M` requires two full-height stems at its outer edges; without them `\/\/` is a `W` and `\/` is a `V`. A full-height vertical at `x` rotates to a full-height vertical at `LW − x`, so the `T` reading inherits two full-height verticals flanking its stem. A `T` is defined by having nothing beside its stem. The conflict is unavoidable at 1:1.
 
-A **squircle** — a rounded rectangle with a 40-unit corner radius — plus a single
-diagonal from upper-left to lower-right.
+### `O / N` — closure is rotation-invariant
 
-- **Read as O:** the closed squircle is the letter; the diagonal reads as a slash
-  detail (think a slashed zero, or `Ø`).
-- **Read as N:** the squircle's straight left and right sides become the N's two
-  stems; the diagonal becomes the N's diagonal; the top and bottom curves read as
-  connecting flourishes.
+Reading `O` requires a closed counter. Rotation maps closed loops to closed loops, so whatever closes the `O` is still closing it in the `N` reading. You cannot make the closure subordinate in one orientation only, because weight is orientation-invariant (above). Worse, `O` and `N` are *both* intrinsically 180°-symmetric, so there is no asymmetry to exploit either: the pair genuinely wants to be one picture read two ways.
 
-The diagonal runs `(18,42) → (94,98)`, whose two endpoints are each other's
-rotation about `(56,70)` — so the diagonal maps exactly onto itself. Combined with
-the symmetric squircle, **the entire glyph is self-rotational**, which is why one
-drawing serves all five `O`/`N` positions.
+This one is worth stating carefully, because the obvious diagnosis — "study 000 forced this glyph to be self-rotational and that was a self-imposed extra constraint" — is wrong. The constraint is essentially forced by the symmetry of both letters. Study 000's error was execution (a 40-unit corner radius left almost no straight side, so it read `Ø`), not architecture.
 
-*Refinement note:* it currently leans `Ø`. Narrowing the box and lengthening the
-straight sides pushes the reading toward `N` without hurting the `O`.
+### `R / P` — same handedness
 
-### `G_TE` — T ↔ E *(the neatest solve)*
+`R` and `P` both have the stem on the left and the bowl in the upper right. Rotation flips left for right *and* top for bottom. So:
 
-Four strokes:
+> A left-stemmed, top-bowled letter always rotates into a right-stemmed, bottom-bowled shape. No single-bowl glyph can rotate from `R` into `P` while keeping both bowls in the upper half and both stems on the left.
 
-| Stroke | Reads as T | Reads as E |
-| --- | --- | --- |
-| Full-width bar at cap line | crossbar | bottom arm *(after rotation)* |
-| Centred stem, cap to baseline | stem | spine *(maps onto itself)* |
-| Short spur at mid-height | decorative | middle arm |
-| Short spur at baseline | decorative | top arm *(after rotation)* |
+Give the `P` its left stem and the bowl lands in the bottom half; put the bowl in the top half and the stem lands on the right.
 
-The trick: **the spurs point left in the T reading and right in the E reading.**
-Arms on the left of a spine don't say "E" to anyone, so upright the eye discards
-them as ornament and reads the dominant T. Rotate, and they land on the correct
-side and switch from noise to structure.
+### What we do about it
 
-The centred stem doing double duty as spine *and* stem is the free lunch from
-rotation rule #2 above.
+All three are handled the same way, which is how most published ambigrams handle same-handed pairs: **let context carry the weaker reading**. `MOTOP?OPONENT` and `MOTOPRO?ONENT` each admit essentially one answer. The residue strokes are then absorbed by the rule motif (§5) so they read as deliberate rather than as leftovers.
 
-### `G_PO` — P ↔ O *(fair)*
+The one avenue not yet explored inside the strict ambigram is **letting the two readings divide the artwork differently**. The authored half spans seven letters upright (`MOTOPRO`) and six rotated (`PONENT`), so the rotated side has ~17% more width per letter and its letter boundaries need not fall where the upright ones do. Exploiting that means drawing a continuous stroke field rather than a row of letters, which is hand-drawing work rather than parametric work. It is the most promising remaining idea inside this constraint, and it is not cheap.
 
-A full-height stem plus a bowl closing at `y = 100`.
+The cheaper escape is to stop insisting on one ink. See §10.
 
-- **Upright:** stem + bowl in the upper two-thirds = `P`.
-- **Rotated:** the bowl becomes a closed round counter sitting on the baseline —
-  reading as a **lowercase `o`** — with the ex-stem now rising on its right.
+## 5. The rule motif
 
-Mixed case is entirely legitimate in ambigrams, so the small `o` is a feature, not
-a bug. The leftover stem is the honest compromise: it's marked as a ghost stroke
-and is intended to be **kerned into the neighbouring `N`'s left stem** so it reads
-as a ligature rather than a stray.
+One authored stroke — a rule sitting on the baseline under the left half — becomes, under rotation, a rule sitting on the cap line over the right half. They overlap across the pivot `O`.
 
-Because kerning must stay palindromic, tightening the gap between positions 9–10
-(`O N`) automatically tightens 4–5 (`O P`) by the same amount — which is exactly
-where you want it. Free.
+It does three jobs at once:
 
-### `G_MT` — M ↔ T *(hard, but landed)*
+- gives the final `T` its crossbar
+- gives the `E` its top arm
+- establishes rules-and-verticals as a deliberate visual language, so the leftover posts from the obstructed pairs read as intentional structure rather than as residue
 
-This one only works because of rotation rule #1.
+That third job is the important one. It is a systemic answer to the residue problem instead of fighting it glyph by glyph, and it is why the `R`'s right-hand post (which exists only to give the `P` a stem) does not look like a mistake.
 
-| Stroke | Reads as M | Reads as T |
-| --- | --- | --- |
-| Full-width rule at the baseline | a base rule / underline | **the crossbar** |
-| Heavy centred spine | the M's middle | **the stem** (maps onto itself) |
-| Two diagonals, top corners → bottom centre | the M's V | an A-frame ghost |
-| Two thin outer verticals | the M's shoulders | ghost brackets |
+## 6. Letter-by-letter state
 
-The base rule is the key move. `M` has no horizontal anywhere, and `T` is 50%
-horizontal — so the horizontal has to be smuggled in as a design element (an
-underline under the word's opening) that the rotation promotes into the T's
-crossbar. Because the rule sits at the baseline it reads as deliberate styling
-upright, and as pure letterform rotated.
+| Letter | Upright | Rotated | Notes |
+| --- | --- | --- | --- |
+| `M` | Reads | Weak `T` | Edge stems become flanking verticals; the V's tail becomes the `T`'s stem, the rule its crossbar. |
+| `O` | Reads | Weak `N` | Stadium at uniform weight, straight sides 62% of cap height, plus a diagonal. Leans `Ø`; that is the compromise. |
+| `T` | Reads | Reads `E` | The best solve. Stem right of centre so the `E`'s bottom arm reaches further right than left; top arm is the rule; only the middle arm is smuggled in, as a short left tick. |
+| `P` | Reads | Reads `o` | Bowl becomes a lowercase `o` on the baseline; the stem becomes a post to its right, kerned tight so it ligatures into `p10`'s stem. Mixed case is legitimate in ambigrams. |
+| `R` | Reads | Weak `P` | Leg terminates on a full-height rule at the right edge; that rule gives the `P` its stem. The bowl still lands in the wrong half. |
 
-The residue is the M's V and shoulders, which hang under the rotated crossbar as a
-faint A-frame. They're drawn lighter so the T's silhouette dominates. **Weight
-contrast is the load-bearing device here** — this pair will not read at uniform
-stroke weight.
+Uniform stroke weight inside the bowls matters more than it sounds. Mixing weights left visible notches where light curves met heavy stems, which read as drawing errors at any size above about 100px.
 
-*Refinement note:* consider extending the rule across the first six letters as a
-continuous underline. Under rotation it becomes a continuous overline across the
-last six, which reads as intentional in both orientations and lets the M's
-shoulders curl into it instead of dangling.
+## 7. The two-tier lockup
 
-### `G_RP` — R ↔ P *(the unsolved one)*
+A 13-letter ambigram will never survive a favicon, and this one has a legibility ceiling even at full width. So the mark is two things:
 
-Stem + bowl + diagonal leg for the `R`, plus a ghost post on the right that
-becomes the `P`'s stem after rotation. Upright it reads `R` cleanly. Rotated it
-reads as a mirrored `R` — which is to say, it doesn't read as `P` on its own
-merits yet.
+- **Wordmark** — the full lockup, for hero and large-format use, where the reader has time and context.
+- **Roundel** — a circle with the rule motif running tangent below it on the left and above it on the right, cropped square. Self-rotational, so it is its own ambigram, and it holds together at 32px. It is a crop of the wordmark's pivot, so the two are visibly of a piece.
 
-Why, and what to do about it, is its own section.
+The two rails overlap across the middle rather than butting end-to-end at the centre; butted, they read as one zigzag instead of two offset rules.
 
----
+<!--| PAGE-BREAK -->
 
-## 5. The handedness problem
+## 8. Reading the study sheet
 
-`R` and `P` have the **same handedness**: stem on the left, bowl on the upper
-right. Rotation rule #3 says a 180° turn flips left and right. So:
-
-> A left-stemmed letter always rotates into a right-stemmed shape. Therefore no
-> single-bowl glyph can rotate from `R` into `P` while keeping both bowls in the
-> upper half and both stems on the left.
-
-This isn't a lack of skill — it's geometry. Every attempt runs into the same wall:
-give the P its left stem and the bowl lands in the bottom half; put the bowl in
-the top half and the stem lands on the right.
-
-Three real escapes, in rough order of how well they tend to work:
-
-1. **Let context carry it.** Draw one glyph that reads `R` strongly and `P`
-   acceptably, and rely on the reader. Both slots have overwhelming context:
-   `MOTOP?OPONENT` and `MOTOPRO?ONENT` admit essentially one answer each. This is
-   how most published ambigrams handle same-handed pairs, and it's the
-   recommended path here.
-2. **Equalise the handedness.** Redraw the `R` with a straight *vertical* leg
-   instead of a diagonal one, giving the glyph a full-height post on both left and
-   right. The two posts then swap roles under rotation, and letter identity is
-   carried by the bowl and by weight contrast rather than by silhouette. Costs you
-   a slightly techno-looking `R`.
-3. **Restructure the pairing.** Break the strict one-glyph-per-letter mapping and
-   let a block of letters rotate into a *different-length* block (e.g. `M ↔ NT`).
-   This buys new pairings but requires reworking the whole lockup, and the
-   alternatives explored (`O/E`, `T/N`, `P/P`) were not obviously easier.
-
----
-
-## 6. Reading the construction sheet
-
-| | Meaning |
+| Row | What it shows |
 | --- | --- |
-| **Black strokes** | Load-bearing — the stroke does real letterform work in *both* orientations. |
-| **Red strokes** | Compromised — decorative in one orientation, structural in the other. These are the strokes to tune by eye, and the ones to lighten, curl, or kern away. |
+| **The mark** | Monotone, as it would actually be used. This is the honest view — everything else is diagnostic. |
+| **Rotated 180°** | Identical to the row above, pixel for pixel. That identity *is* the ambigram. |
+| **Stroke roles** | Black = primary letterform, grey = secondary, red = rule motif. Letters are labelled above (upright reading) and below (rotated reading) each position. |
+| **Size test** | The lockup at 820px, 430px and 240px. An ambigram that only works at full width is not finished. |
+| **Small-size sibling** | The roundel at 168px down to 32px. |
 
-The `O/N` glyph is entirely black. `T/E` is mostly black. `M/T` and `R/P` carry
-the most red — which is a fair visual summary of where the remaining work is.
+## 9. Files
 
----
+Two generators, two independent series of studies. They share no code and are not variants of each other — they are different marks.
 
-## 7. Files
-
-```
+```text
 assets/logos/
 ├── README.md                                 ← this document
-├── motoproponent-ambigram-generator.py       ← generates the sheet from glyph definitions
-└── motoproponent-ambigram-study-000.svg      ← study 000; each pass adds the next number
+│
+├── motoproponent-ambigram-generator.py       ← flat ambigram, one ink (§3–§7)
+├── motoproponent-ambigram-study-000.svg      ← five-glyph architecture (superseded)
+├── motoproponent-ambigram-study-001.svg      ← half + rotation architecture
+├── motoproponent-ambigram-study-002.svg      ← uniform-weight bowls, computed layout
+├── motoproponent-ambigram-study-003.svg      ← shorter T spur, legible roundel
+│
+├── motoproponent-duotone-generator.py        ← duotone lockup, two inks (§10)
+├── motoproponent-duotone-study-000.svg       ← the device, three treatments
+├── motoproponent-duotone-study-001.svg       ← tint + dark-ground treatments added
+└── motoproponent-duotone-study-002.svg       ← widths rebalanced, tracking uniform
 ```
 
 ### Dependencies
 
-None. Plain Python 3, standard library only. Output is SVG — vector all the way
-down, no raster export step.
+None. Plain Python 3, standard library only. Output is SVG — vector all the way down, no raster export step.
 
 ### Regenerating
 
-Every run writes a **new numbered study** rather than overwriting the last one, so
-the folder (and the git history) shows the mark evolving:
+Both generators take the same arguments, and each numbers its own series independently. Every run writes a **new numbered study** rather than overwriting the last one, so the folder and the git history show the mark evolving:
 
 ```bash
 python3 motoproponent-ambigram-generator.py             # -> next free number
 python3 motoproponent-ambigram-generator.py --replace   # -> overwrite the latest study
 python3 motoproponent-ambigram-generator.py 7           # -> force study-007
+
+python3 motoproponent-duotone-generator.py              # same three forms
 ```
 
-Files land next to the script as `motoproponent-ambigram-study-NNN.svg`. The
-numbering is derived by scanning the folder for existing studies and taking the
-highest + 1, so it survives deletions and manual renames. Use `--replace` while
-you're iterating on a single idea, and let it increment when a pass is worth
-keeping.
+Numbering scans the folder for existing studies and takes the highest + 1, so it survives deletions and manual renames. Use `--replace` while iterating on one idea; let it increment when a pass is worth keeping.
+
+### Reviewing a study
+
+There is no raster step, so to actually look at a study at a given size, render it with headless Chrome:
+
+```bash
+"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" \
+  --headless --disable-gpu --hide-scrollbars \
+  --screenshot=study.png --window-size=1828,1593 \
+  "file://$PWD/motoproponent-ambigram-study-003.svg"
+```
+
+Judging an ambigram from its path data does not work. Look at the picture.
 
 ### Editing the letterforms
 
-All geometry lives in the `G` dictionary near the top of the generator:
+Two places, and only two.
+
+**Layout** lives in the `LEFT` table near the top of the generator. Widths and gaps are free; the lockup width and the mirror side are derived from them:
 
 ```python
-G["ON"] = (112, [                       # (advance width, [strokes])
-    ("M52,6 H60 A40,40 0 0 1 …", 20, INK),   # (path data, stroke width, colour)
-    ("M18,42 L94,98",            20, INK),
-])
+LEFT = [               # (letter, width, gap after)
+    ("M", 126, 40),
+    ("O", 104, 30),
+    ...
+]
 ```
 
-Change a coordinate, re-run, and the rotated views on the sheet update
-automatically and *honestly* — they're references to the same paths, so you can't
-accidentally flatter yourself.
+**Letterforms** live in one `draw_*` function each, taking the letter's left edge and width:
 
-**The one invariant to preserve:** every glyph's rotation partner is generated
-from the same definition, so a change to a glyph changes *both* letters it
-represents. Adjusting the `O` necessarily adjusts the `N`. That coupling is the
-whole discipline of ambigram design; the tool just makes it impossible to forget.
+```python
+def draw_O(x, w):
+    l, r = x + 8, x + w - 8
+    S(f"M{l},30 V110 C{l},142 {r},142 {r},110 V30 C{r},-2 {l},-2 {l},30 Z")
+    S(f"M{l},30 L{r},110")
+```
 
----
+**The one invariant to preserve:** never author anything in the right half of the word. It does not exist as artwork. Everything from the lockup centre rightward is generated, so a change to a left-half letter necessarily changes the letter it rotates into. That coupling is the whole discipline of ambigram design; the tool makes it impossible to forget.
 
-## 8. Suggested next steps
+The duotone generator is laid out the same way — a `WIDTHS` table and one `L_*` function per letter — but with none of that coupling, since each letter is only ever itself. The only thing to preserve there is the width balance across the pivot described in §10; change a letter's width and re-check that the two halves still total the same, or the pivot drifts off the axis.
 
-1. Narrow `G_ON` so it leans less `Ø` and more `O`/`N`.
-2. Run the `M/T` base rule out into a continuous underline across the first half
-   of the word (it becomes an overline across the second half).
-3. Pick an escape route for `R/P` — recommendation is option 1, context.
-4. Tighten kerning at positions 4–5 and 9–10 so the `P` stem ligatures into its
-   neighbour.
-5. Outline the strokes and take it into Illustrator for optical correction —
-   overshoot on the round forms, thin the diagonal joins, and balance the
-   apparent weight of the diagonals against the stems.
-6. Test at small size and at low contrast. An ambigram that only works at 400px
-   isn't finished.
+## 10. The duotone route
+
+Every wall in §4 comes from one requirement: a single stroke has to serve both readings. Drop that and they all fall over at once.
+
+### The construction
+
+Draw the word properly, once, as `W`. The artwork is then two layers in two colours:
+
+```text
+layer A  =  W
+layer B  =  rotate(W, 180°)
+```
+
+Upright you read layer A. Rotate the composite and layer A goes upside-down while layer B comes upright, so you read layer B. And since `rotate(A + B) = rotate(W) + W = B + A`, the composite is rotationally symmetric onto itself with the two hues swapping roles. The rotated row on the study sheet is the same geometry with the colours exchanged.
+
+### What it buys
+
+Every letter in both readings is a correct letterform. No compromised glyphs, no residue posts, no letters carried by context — `M`, `O`, `N`, `T`, `E`, `P` and `R` are simply drawn as themselves. The alphabet is seven letters and none of them fight.
+
+Layout is also completely unconstrained, because the composite is symmetric for *any* `W`. Widths and tracking are free to be purely optical.
+
+The one deliberate layout choice is that the letters before the pivot `O` total exactly the same width as the letters after it (624 units each), so uniform tracking puts the pivot on the rotation axis. Both layers then draw that `O` in the same place and it resolves to a single darker form — a useful anchor at the point the mark turns on. Only `M`, `R`, `N` and `E` were free to be adjusted to hit that total; every other letter appears on both sides of the pivot and has to keep one width. An earlier pass bought the same centring with looser tracking across `NENT`, and the uneven rhythm was obvious the moment you looked at a single reading on its own.
+
+### What it costs
+
+**Colour becomes load-bearing.** Flattened to one ink the two layers tangle into noise. So this cannot be the only lockup — it needs a monochrome fallback, which is what the flat ambigram or plain type is for.
+
+It is also twice the ink, so it gives out at small sizes sooner than a normal wordmark. The size test puts the floor around 500–550px wide for the equal-value treatment.
+
+### Treatments
+
+How hard the second reading pushes is a dial:
+
+| Treatment | Behaviour |
+| --- | --- |
+| Equal value, two hues | Neither reading wins; the eye chooses which hue to follow. Densest option. |
+| Ink primary, accent secondary | Upright dominates, second reading is discoverable. |
+| One hue, tint secondary | Same as above but needs no second brand colour — useful while the palette is unsettled. |
+| Ink primary, hairline secondary | Second reading is a watermark. Cleanest read, least drama. |
+
+Overlaps blend rather than one layer simply hiding the other: **multiply** on a light ground, **screen** on a dark one. Note that `mix-blend-mode` may not survive an Illustrator round-trip; reapply Multiply to the second layer there, or set it as a transparency-group blend on export.
+
+<!--| PAGE-BREAK -->
+
+## 11. Suggested next steps
+
+1. Decide whether the legibility ceiling in §4 is acceptable. If it is not, the realistic alternatives are a different typographic vernacular (blackletter or vintage brush script — both far more forgiving vehicles, and both more idiomatic to motorcycle culture than a geometric sans) or a shorter ambigram with `MOTOPROPONENT` set as ordinary type.
+2. Attempt the different-boundaries idea at the end of §4 on the `M/T` pair specifically, since the final `T` is the weakest reading in the mark.
+3. Tighten kerning at positions 4–5 further so the `P`'s residue post fully ligatures into `p10`'s stem rather than sitting near it.
+4. Relieve the congestion around positions 6–8, where the `R`'s post, the pivot `O` and the rotated `R`'s bowl currently crowd into one mass.
+5. Outline the strokes and take it into Illustrator for optical correction — overshoot on the round forms, thin the diagonal joins, balance the apparent weight of diagonals against stems.
+6. Test at low contrast and on a dark ground, not just at small size.
