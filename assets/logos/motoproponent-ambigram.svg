@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1560" height="1320" viewBox="0 0 1560 1320"><rect width="1560" height="1320" fill="#FAF8F5"/><defs>
+<g id="gON">
+<path d="M52,6 H60 A40,40 0 0 1 100,46 V94 A40,40 0 0 1 60,134 H52 A40,40 0 0 1 12,94 V46 A40,40 0 0 1 52,6 Z" fill="none" stroke="#14110E" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<path d="M18,42 L94,98" fill="none" stroke="#14110E" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+</g>
+<g id="gTE">
+<path d="M0,16 H104" fill="none" stroke="#14110E" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<path d="M52,16 V124" fill="none" stroke="#14110E" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<path d="M20,70 H52" fill="none" stroke="#C8452F" stroke-width="14" stroke-linecap="butt" stroke-linejoin="round"/>
+<path d="M20,124 H52" fill="none" stroke="#C8452F" stroke-width="14" stroke-linecap="butt" stroke-linejoin="round"/>
+</g>
+<g id="gPO">
+<path d="M18,6 V134" fill="none" stroke="#C8452F" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<path d="M18,16 C72,16 106,30 106,56 C106,84 72,100 18,100" fill="none" stroke="#14110E" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+</g>
+<g id="gRP">
+<path d="M18,6 V134" fill="none" stroke="#14110E" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<path d="M18,16 C72,16 102,30 102,54 C102,78 72,94 18,94" fill="none" stroke="#14110E" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<path d="M60,94 L102,134" fill="none" stroke="#14110E" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round"/>
+<path d="M104,6 V134" fill="none" stroke="#C8452F" stroke-width="16" stroke-linecap="butt" stroke-linejoin="round"/>
+</g>
+<g id="gMT">
+<path d="M0,124 H140" fill="none" stroke="#14110E" stroke-width="22" stroke-linecap="butt" stroke-linejoin="round"/>
+<path d="M70,16 V124" fill="none" stroke="#14110E" stroke-width="24" stroke-linecap="butt" stroke-linejoin="round"/>
+<path d="M20,16 L70,124" fill="none" stroke="#14110E" stroke-width="17" stroke-linecap="butt" stroke-linejoin="round"/>
+<path d="M120,16 L70,124" fill="none" stroke="#14110E" stroke-width="17" stroke-linecap="butt" stroke-linejoin="round"/>
+<path d="M20,16 V124" fill="none" stroke="#C8452F" stroke-width="11" stroke-linecap="butt" stroke-linejoin="round"/>
+<path d="M120,16 V124" fill="none" stroke="#C8452F" stroke-width="11" stroke-linecap="butt" stroke-linejoin="round"/>
+</g>
+</defs><text x="40" y="58" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="30" fill="#14110E" text-anchor="start" font-weight="700" letter-spacing="0.28em">MOTOPROPONENT</text>
+<text x="40" y="84" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="12" fill="#8E8880" text-anchor="start" font-weight="400" letter-spacing="0.14em">180° ROTATIONAL AMBIGRAM — CONSTRUCTION SHEET / GEOMETRIC SANS</text>
+<text x="40" y="104" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="12" fill="#8E8880" text-anchor="start" font-weight="400" letter-spacing="0.14em">13 letters · centre letter O is rotationally symmetric · only 5 unique glyphs to draw</text>
+<rect x="40" y="150" width="470" height="270" fill="none" stroke="#D8D3CB"/>
+<text x="58" y="180" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="15" fill="#14110E" text-anchor="start" font-weight="700" letter-spacing="0.14em">M &#8596; T</text>
+<text x="58" y="200" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="11" fill="#8E8880" text-anchor="start" font-weight="400" letter-spacing="0.14em">hard — base rule becomes the crossbar, spine becomes the stem</text>
+<g transform="translate(80,220) scale(1.05)"><use xlink:href="#gMT"/></g>
+<text x="153.5" y="393.0" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="11" fill="#14110E" text-anchor="middle" font-weight="400" letter-spacing="0.14em">reads M</text>
+<g transform="translate(337.0,220) scale(1.05)"><use xlink:href="#gMT" transform="rotate(180,70.0,70)"/></g>
+<text x="410.5" y="393.0" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="11" fill="#14110E" text-anchor="middle" font-weight="400" letter-spacing="0.14em">reads T</text>
+<text x="282.0" y="302" font-family="Helvetica,Arial" font-size="22" fill="#8E8880" text-anchor="middle">&#8635;</text>
+<rect x="540" y="150" width="470" height="270" fill="none" stroke="#D8D3CB"/>
+<text x="558" y="180" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="15" fill="#14110E" text-anchor="start" font-weight="700" letter-spacing="0.14em">O &#8596; N</text>
+<text x="558" y="200" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="11" fill="#8E8880" text-anchor="start" font-weight="400" letter-spacing="0.14em">easy — one self-rotational glyph, used 5×</text>
+<g transform="translate(580,220) scale(1.05)"><use xlink:href="#gON"/></g>
+<text x="638.8" y="393.0" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="11" fill="#14110E" text-anchor="middle" font-weight="400" letter-spacing="0.14em">reads O</text>
+<g transform="translate(807.6,220) scale(1.05)"><use xlink:href="#gON" transform="rotate(180,56.0,70)"/></g>
+<text x="866.4" y="393.0" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="11" fill="#14110E" text-anchor="middle" font-weight="400" letter-spacing="0.14em">reads N</text>
+<text x="752.6" y="302" font-family="Helvetica,Arial" font-size="22" fill="#8E8880" text-anchor="middle">&#8635;</text>
+<rect x="1040" y="150" width="470" height="270" fill="none" stroke="#D8D3CB"/>
+<text x="1058" y="180" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="15" fill="#14110E" text-anchor="start" font-weight="700" letter-spacing="0.14em">T &#8596; E</text>
+<text x="1058" y="200" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="11" fill="#8E8880" text-anchor="start" font-weight="400" letter-spacing="0.14em">good — spurs point left as T, right as E</text>
+<g transform="translate(1080,220) scale(1.05)"><use xlink:href="#gTE"/></g>
+<text x="1134.6" y="393.0" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="11" fill="#14110E" text-anchor="middle" font-weight="400" letter-spacing="0.14em">reads T</text>
+<g transform="translate(1299.2,220) scale(1.05)"><use xlink:href="#gTE" transform="rotate(180,52.0,70)"/></g>
+<text x="1353.8" y="393.0" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="11" fill="#14110E" text-anchor="middle" font-weight="400" letter-spacing="0.14em">reads E</text>
+<text x="1244.2" y="302" font-family="Helvetica,Arial" font-size="22" fill="#8E8880" text-anchor="middle">&#8635;</text>
+<rect x="40" y="450" width="470" height="270" fill="none" stroke="#D8D3CB"/>
+<text x="58" y="480" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="15" fill="#14110E" text-anchor="start" font-weight="700" letter-spacing="0.14em">P &#8596; O</text>
+<text x="58" y="500" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="11" fill="#8E8880" text-anchor="start" font-weight="400" letter-spacing="0.14em">fair — bowl reads P; rotated it reads as a lowercase o</text>
+<g transform="translate(80,520) scale(1.05)"><use xlink:href="#gPO"/></g>
+<text x="141.95" y="693.0" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="11" fill="#14110E" text-anchor="middle" font-weight="400" letter-spacing="0.14em">reads P</text>
+<g transform="translate(313.9,520) scale(1.05)"><use xlink:href="#gPO" transform="rotate(180,59.0,70)"/></g>
+<text x="375.84999999999997" y="693.0" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="11" fill="#14110E" text-anchor="middle" font-weight="400" letter-spacing="0.14em">reads O</text>
+<text x="258.9" y="602" font-family="Helvetica,Arial" font-size="22" fill="#8E8880" text-anchor="middle">&#8635;</text>
+<rect x="540" y="450" width="470" height="270" fill="none" stroke="#D8D3CB"/>
+<text x="558" y="480" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="15" fill="#14110E" text-anchor="start" font-weight="700" letter-spacing="0.14em">R &#8596; P</text>
+<text x="558" y="500" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="11" fill="#8E8880" text-anchor="start" font-weight="400" letter-spacing="0.14em">hardest — same handedness; ghost post carries the P stem</text>
+<g transform="translate(580,520) scale(1.05)"><use xlink:href="#gRP"/></g>
+<text x="645.1" y="693.0" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="11" fill="#14110E" text-anchor="middle" font-weight="400" letter-spacing="0.14em">reads R</text>
+<g transform="translate(820.2,520) scale(1.05)"><use xlink:href="#gRP" transform="rotate(180,62.0,70)"/></g>
+<text x="885.3000000000001" y="693.0" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="11" fill="#14110E" text-anchor="middle" font-weight="400" letter-spacing="0.14em">reads P</text>
+<text x="765.2" y="602" font-family="Helvetica,Arial" font-size="22" fill="#8E8880" text-anchor="middle">&#8635;</text>
+<text x="40" y="790" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="12" fill="#14110E" text-anchor="start" font-weight="700" letter-spacing="0.14em">THE LOCKUP</text>
+<g transform="translate(40,820) scale(0.8958837772397095)"><use xlink:href="#gMT" transform="translate(0,0)"/>
+<use xlink:href="#gON" transform="translate(150,0)"/>
+<use xlink:href="#gTE" transform="translate(272,0)"/>
+<use xlink:href="#gON" transform="translate(386,0)"/>
+<use xlink:href="#gPO" transform="translate(508,0)"/>
+<use xlink:href="#gRP" transform="translate(636,0)"/>
+<use xlink:href="#gON" transform="translate(770,0)"/>
+<use xlink:href="#gRP" transform="translate(892,0) rotate(180,62.0,70)"/>
+<use xlink:href="#gPO" transform="translate(1026,0) rotate(180,59.0,70)"/>
+<use xlink:href="#gON" transform="translate(1154,0) rotate(180,56.0,70)"/>
+<use xlink:href="#gTE" transform="translate(1276,0) rotate(180,52.0,70)"/>
+<use xlink:href="#gON" transform="translate(1390,0) rotate(180,56.0,70)"/>
+<use xlink:href="#gMT" transform="translate(1512,0) rotate(180,70.0,70)"/></g>
+<text x="40" y="977.4237288135594" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="11" fill="#8E8880" text-anchor="start" font-weight="400" letter-spacing="0.14em">read upright</text>
+<text x="40" y="1025.4237288135594" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="12" fill="#14110E" text-anchor="start" font-weight="700" letter-spacing="0.14em">THE SAME ARTWORK, ROTATED 180°</text>
+<g transform="translate(40,1055.4237288135594) scale(0.8958837772397095) rotate(180,826.0,70)"><use xlink:href="#gMT" transform="translate(0,0)"/>
+<use xlink:href="#gON" transform="translate(150,0)"/>
+<use xlink:href="#gTE" transform="translate(272,0)"/>
+<use xlink:href="#gON" transform="translate(386,0)"/>
+<use xlink:href="#gPO" transform="translate(508,0)"/>
+<use xlink:href="#gRP" transform="translate(636,0)"/>
+<use xlink:href="#gON" transform="translate(770,0)"/>
+<use xlink:href="#gRP" transform="translate(892,0) rotate(180,62.0,70)"/>
+<use xlink:href="#gPO" transform="translate(1026,0) rotate(180,59.0,70)"/>
+<use xlink:href="#gON" transform="translate(1154,0) rotate(180,56.0,70)"/>
+<use xlink:href="#gTE" transform="translate(1276,0) rotate(180,52.0,70)"/>
+<use xlink:href="#gON" transform="translate(1390,0) rotate(180,56.0,70)"/>
+<use xlink:href="#gMT" transform="translate(1512,0) rotate(180,70.0,70)"/></g>
+<text x="40" y="1212.8474576271187" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="11" fill="#8E8880" text-anchor="start" font-weight="400" letter-spacing="0.14em">read upside-down — identical path data, nothing redrawn</text>
+<line x1="40" y1="1250.8474576271187" x2="1520" y2="1250.8474576271187" stroke="#D8D3CB"/>
+<line x1="40" y1="1274.8474576271187" x2="80" y2="1274.8474576271187" stroke="#14110E" stroke-width="12"/>
+<text x="92" y="1279.8474576271187" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="11" fill="#8E8880" text-anchor="start" font-weight="400" letter-spacing="0.14em">LOAD-BEARING — reads as a real stroke in both orientations</text>
+<line x1="640" y1="1274.8474576271187" x2="680" y2="1274.8474576271187" stroke="#C8452F" stroke-width="12"/>
+<text x="692" y="1279.8474576271187" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="11" fill="#8E8880" text-anchor="start" font-weight="400" letter-spacing="0.14em">COMPROMISED — decorative one way, structural the other; tune weight by eye</text></svg>
