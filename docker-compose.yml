@@ -1,0 +1,7 @@
+services:
+  web:
+    image: motoproponent:latest
+    container_name: motoproponent
+    ports:
+      - "1480:80"
+    restart: unless-stopped

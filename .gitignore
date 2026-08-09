@@ -222,7 +222,8 @@ junit.xml
 .prettiercache
 
 # Docker
-.dockerignore
+# .dockerignore is tracked on purpose: it defines the build context, so leaving
+# it out makes a fresh clone build a different (much larger) image.
 Dockerfile.dev
 docker-compose.override.yml
 .docker/
