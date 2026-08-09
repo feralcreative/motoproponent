@@ -5,6 +5,10 @@ Every 'rotated' view is the IDENTICAL path data with transform=rotate(180),
 so nothing on the sheet can cheat.
 """
 
+import os
+import re
+import sys
+
 H_TOP, H_BOT = 6, 134          # cap height band
 CY = 70                        # vertical rotation centre
 
@@ -92,7 +96,7 @@ def place(key, rot, x):
     t = f'translate({x},0)'
     if rot:
         t += f' rotate(180,{w/2},70)'
-    return f'<use href="#g{key}" transform="{t}"/>', w
+    return f'<use xlink:href="#g{key}" transform="{t}"/>', w
 
 def lockup():
     parts, x = [], 0
@@ -134,11 +138,11 @@ for i,(key,a,b,note) in enumerate(pairs):
     s = 1.05
     gx = cx + 40
     gy = cy + 70
-    body.append(f'<g transform="translate({gx},{gy}) scale({s})"><use href="#g{key}"/></g>')
+    body.append(f'<g transform="translate({gx},{gy}) scale({s})"><use xlink:href="#g{key}"/></g>')
     body.append(txt(gx + w*s/2, gy + 140*s + 26, f"reads {a}", 11, INK, anchor="middle"))
     gx2 = cx + 40 + w*s + 110
     body.append(f'<g transform="translate({gx2},{gy}) scale({s})">'
-                f'<use href="#g{key}" transform="rotate(180,{w/2},70)"/></g>')
+                f'<use xlink:href="#g{key}" transform="rotate(180,{w/2},70)"/></g>')
     body.append(txt(gx2 + w*s/2, gy + 140*s + 26, f"reads {b}", 11, INK, anchor="middle"))
     body.append(f'<text x="{gx + w*s + 55}" y="{gy+82}" font-family="Helvetica,Arial" font-size="22" '
                 f'fill="{LABEL}" text-anchor="middle">&#8635;</text>')
@@ -165,10 +169,40 @@ body.append(f'<line x1="640" y1="{y3+24}" x2="680" y2="{y3+24}" stroke="{GHOST}"
 body.append(txt(692, y3+29, "COMPROMISED — decorative one way, structural the other; tune weight by eye", 11))
 
 SH = int(y3 + 70)
-svg = (f'<svg xmlns="http://www.w3.org/2000/svg" width="{SW}" height="{SH}" '
+svg = (f'<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" '
+       f'width="{SW}" height="{SH}" '
        f'viewBox="0 0 {SW} {SH}">'
        f'<rect width="{SW}" height="{SH}" fill="{BG}"/>'
        + defs() + "\n".join(body) + '</svg>')
 
-open("/sessions/jolly-vibrant-fermi/mnt/outputs/motoproponent-ambigram.svg","w").write(svg)
-print("ok", SW, SH, "lockup width", lw)
+# ---------------------------------------------------------------- output
+# Each run drops a new numbered study alongside the previous ones, so the
+# evolution of the mark stays visible in the folder (and in the git history).
+#   python3 motoproponent-ambigram-generator.py            -> next free number
+#   python3 motoproponent-ambigram-generator.py --replace  -> overwrite the latest
+#   python3 motoproponent-ambigram-generator.py 7          -> force study-007
+
+STEM = "motoproponent-ambigram-study-"
+HERE = os.path.dirname(os.path.abspath(__file__))
+
+def existing():
+    ns = []
+    for f in os.listdir(HERE):
+        m = re.fullmatch(re.escape(STEM) + r"(\d+)\.svg", f)
+        if m:
+            ns.append(int(m.group(1)))
+    return sorted(ns)
+
+args = sys.argv[1:]
+found = existing()
+if args and args[0].isdigit():
+    n = int(args[0])
+elif "--replace" in args:
+    n = found[-1] if found else 0
+else:
+    n = found[-1] + 1 if found else 0
+
+OUT = os.path.join(HERE, f"{STEM}{n:03d}.svg")
+with open(OUT, "w") as f:
+    f.write(svg)
+print(f"wrote {os.path.basename(OUT)}  ({SW}×{SH}, lockup width {lw})")
