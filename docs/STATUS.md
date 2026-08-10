@@ -17,7 +17,11 @@ The site has **not** been deployed since this work landed. Two things block a cl
 - `prod.sh` gates on branch `main` ([prod.sh:98](../utils/deploy/prod.sh#L98)) and the work is on `feat/logo`. Merge first, or pass `--force`.
 - Public reachability also needs the Cloudflare Tunnel route, which is a dashboard action, not something `prod.sh` does. Check [nas-setup.md §3](nas-setup.md) before assuming the deploy is what is broken if the URL 404s.
 
-Whether the tunnel route has ever been added is **unverified**. Confirm with `curl -sS -o /dev/null -w '%{http_code}\n' https://motoproponent.com/` before debugging anything else — `1033` or a bare 404 means the route is missing, `502` means the route exists but the container is not answering.
+**Verified 2026-08-10: the tunnel route exists and works.** Apex returns 200, `www` returns 301. That question is closed; do not re-litigate it.
+
+What is live is an **older, pre-SEO image**. The served HTML differs from `public/index.html` by 65 lines and is missing the canonical tag, the GA4 snippet, the OG/Twitter image tags, the apple-touch-icon and the entire YouTube CTA block. Response headers confirm the same: no `Referrer-Policy`, no `X-Frame-Options`, no `X-Robots-Tag`, so `nginx.conf` is stale on the NAS too.
+
+The practical cost: **GA4 is recording nothing, and the only link that would send anyone to the channel is not on the live page.** That is the argument for deploying sooner rather than after the logo settles.
 
 ## Logo — the state of play
 
@@ -55,11 +59,17 @@ Written in plain language at Ziad's instruction — Jeffrey is not a designer, s
 
 ## Waiting on Jeffrey
 
-Six questions in `docs/.private/public-information.md` (git-ignored). Answers so far are recorded in `docs/.private/brand-decisions.md`.
+**All nine questions are answered.** Everything is recorded in `docs/.private/brand-decisions.md` (git-ignored); `public-information.md` is down to one open item. The four that landed 2026-08-10:
 
-Question 4 carries a pending default rather than an answer — "using motoproponent@gmail.com for anything public unless you say otherwise". Ziad was offered the option to move it to the answered file and did not take it, so it stays in the questions doc.
+- **Name in copy:** just `Motoproponent`, one initial cap. No "Jeffrey", no last name. He is pivoting the name to be motorcycles-only.
+- **Styling:** governs **copy only**. The all-caps SVG wordmark and the lowercase ambigram are both unaffected — that was the initial misreading of the answer, and it is settled.
+- **Location:** San Francisco Bay Area. He writes "San Francisco based" in his own copy.
+- **E-mail:** `motoproponent@gmail.com` confirmed for public use. The pending default is now a real answer.
+- **Instagram:** `@M0t0pt0p0nent` — **literal zeros, and the letters differ from the name.** Not a typo; `@motoproponent` was already taken. Never normalise it.
 
-Also outstanding from Jeffrey's side: add `motoproponent.com` as the **first** link in YouTube Studio → Customization → Basic info → Links, and confirm the channel description mentions the domain.
+His channel description is now live and mentions the domain, so that to-do is closed. It is recorded verbatim in `brand-decisions.md` and is the source of the site's new description copy.
+
+Still outstanding from Jeffrey's side: add `motoproponent.com` as the **first** link in YouTube Studio → Customization → Basic info → Links.
 
 ## Time-sensitive
 
