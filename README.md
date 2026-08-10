@@ -6,6 +6,8 @@ A static holding page for `motoproponent.com`, served from the Synology NAS behi
 
 | Path                   | What it is                                                                               |
 | ---------------------- | ---------------------------------------------------------------------------------------- |
+| `_AI_AGENT_PRIMER.md`  | Full briefing for AI agents — stack, traps, load-bearing details                         |
+| `docs/STATUS.md`       | Where the work actually stands and what to do next                                       |
 | `public/`              | **The webroot.** Everything public lives here; the Dockerfile copies the whole directory |
 | `public/index.html`    | The entire site — one self-contained file, inline CSS                                    |
 | `public/robots.txt`    | Allows crawling, explains why, and carries the launch-day checklist                      |
