@@ -4,21 +4,23 @@ A static holding page for `motoproponent.com`, served from the Synology NAS behi
 
 ## What's here
 
-| Path                   | What it is                                                                  |
-| ---------------------- | --------------------------------------------------------------------------- |
-| `site/`                     | **The webroot.** Everything public lives here; the Dockerfile copies the whole directory |
-| `site/index.html`           | The entire site — one self-contained file, inline CSS                       |
-| `site/robots.txt`           | Allows crawling, explains why, and carries the launch-day checklist         |
-| `site/static/`              | `og.png`, `apple-touch-icon.png`                                            |
-| `nginx.conf`                | Server config baked into the image                                          |
-| `Dockerfile`                | Single-stage `nginx:1.27-alpine`; no build step                             |
-| `docker-compose.yml`        | Publishes host port `1480` → container `80`                                 |
-| `utils/deploy/prod.sh`      | Build, ship, and restart on the NAS                                         |
-| `docs/nas-setup.md`         | One-time bringup, the Cloudflare Tunnel route, and all dashboard state      |
-| `docs/public-information.md`| Questions for Jeffrey about what goes public                                |
-| `assets/logos/`             | Ambigram studies and their generators (not part of the site)                |
+| Path                   | What it is                                                                               |
+| ---------------------- | ---------------------------------------------------------------------------------------- |
+| `public/`              | **The webroot.** Everything public lives here; the Dockerfile copies the whole directory |
+| `public/index.html`    | The entire site — one self-contained file, inline CSS                                    |
+| `public/robots.txt`    | Allows crawling, explains why, and carries the launch-day checklist                      |
+| `public/static/`       | `og.png`, `apple-touch-icon.png`                                                         |
+| `nginx.conf`           | Server config baked into the image                                                       |
+| `Dockerfile`           | Single-stage `nginx:1.27-alpine`; no build step                                          |
+| `docker-compose.yml`   | Publishes host port `1480` → container `80`                                              |
+| `utils/deploy/prod.sh` | Build, ship, and restart on the NAS                                                      |
+| `docs/nas-setup.md`    | One-time bringup, the Cloudflare Tunnel route, and all dashboard state                   |
+| `docs/.private/`       | Untracked — brand answers and open questions for Jeffrey                                 |
+| `assets/logos/`        | Ambigram studies and their generators (not part of the site)                             |
 
-The page is `noindex` but **crawlable** — see `site/robots.txt` for why that combination is deliberate and what to change on launch day.
+The webroot is `public/`, not `site/`, because the boilerplate `.gitignore` ignores `site/` as MkDocs build output — which silently kept the static assets out of the repo.
+
+The page is `noindex` but **crawlable** — see `public/robots.txt` for why that combination is deliberate and what to change on launch day.
 
 ## Deploy
 

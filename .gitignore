@@ -238,6 +238,7 @@ serverless.yml.bak
 # Miscellaneous
 .playwright-mcp
 .secrets
+.private
 .augment
 .claude
 .codex
