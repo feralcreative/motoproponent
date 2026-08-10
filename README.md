@@ -6,14 +6,19 @@ A static holding page for `motoproponent.com`, served from the Synology NAS behi
 
 | Path                   | What it is                                                                  |
 | ---------------------- | --------------------------------------------------------------------------- |
-| `index.html`           | The entire site — one self-contained file, inline CSS, no external requests |
-| `robots.txt`           | Blocks indexing while this is a placeholder                                 |
-| `nginx.conf`           | Server config baked into the image                                          |
-| `Dockerfile`           | Single-stage `nginx:1.27-alpine`; no build step                             |
-| `docker-compose.yml`   | Publishes host port `1480` → container `80`                                 |
-| `utils/deploy/prod.sh` | Build, ship, and restart on the NAS                                         |
-| `docs/nas-setup.md`    | One-time bringup, including the Cloudflare Tunnel route                     |
-| `assets/logos/`        | Ambigram construction sheet and its generator (not part of the site)        |
+| `site/`                     | **The webroot.** Everything public lives here; the Dockerfile copies the whole directory |
+| `site/index.html`           | The entire site — one self-contained file, inline CSS                       |
+| `site/robots.txt`           | Allows crawling, explains why, and carries the launch-day checklist         |
+| `site/static/`              | `og.png`, `apple-touch-icon.png`                                            |
+| `nginx.conf`                | Server config baked into the image                                          |
+| `Dockerfile`                | Single-stage `nginx:1.27-alpine`; no build step                             |
+| `docker-compose.yml`        | Publishes host port `1480` → container `80`                                 |
+| `utils/deploy/prod.sh`      | Build, ship, and restart on the NAS                                         |
+| `docs/nas-setup.md`         | One-time bringup, the Cloudflare Tunnel route, and all dashboard state      |
+| `docs/public-information.md`| Questions for Jeffrey about what goes public                                |
+| `assets/logos/`             | Ambigram studies and their generators (not part of the site)                |
+
+The page is `noindex` but **crawlable** — see `site/robots.txt` for why that combination is deliberate and what to change on launch day.
 
 ## Deploy
 

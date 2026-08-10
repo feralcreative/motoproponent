@@ -1,4 +1,0 @@
-# Holding page — keep it out of search until the domain's purpose is settled.
-# Flip to "Allow: /" (and the robots meta in index.html) when the real site ships.
-User-agent: *
-Disallow: /

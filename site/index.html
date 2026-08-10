@@ -7,19 +7,49 @@
   <title>Motoproponent</title>
   <meta name="description" content="Motoproponent — something is being built here." />
 
-  <!-- Holding page: keep it out of the index until the domain's purpose is settled.
-         Flip this to "index, follow" when the real site ships. -->
+  <!-- Holding page: keep it out of the index until there is something worth
+         indexing. Note the ordering trap — robots.txt says "Allow: /" on purpose.
+         Blocking the crawl would stop Google from ever READING this noindex,
+         which is how a bare, snippet-less URL ends up stuck in the index.
+         Crawlable + noindex is the configuration that actually keeps you out.
+         When the real site ships, remove this tag AND the X-Robots-Tag header in
+         nginx.conf AND add the Sitemap: line to robots.txt, in one deploy. -->
   <meta name="robots" content="noindex, nofollow" />
+
+  <!-- Self-referencing. Must exist before the first UTM-tagged inbound link
+         does, or /?utm_source=youtube becomes a crawlable duplicate of /. -->
+  <link rel="canonical" href="https://motoproponent.com/" />
 
   <meta name="theme-color" content="#FAF8F5" media="(prefers-color-scheme: light)" />
   <meta name="theme-color" content="#14110E" media="(prefers-color-scheme: dark)" />
 
   <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Motoproponent" />
+  <meta property="og:locale" content="en_US" />
   <meta property="og:title" content="Motoproponent" />
   <meta property="og:description" content="Something is being built here." />
   <meta property="og:url" content="https://motoproponent.com/" />
+  <meta property="og:image" content="https://motoproponent.com/static/og.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Motoproponent" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Motoproponent" />
+  <meta name="twitter:description" content="Something is being built here." />
+  <meta name="twitter:image" content="https://motoproponent.com/static/og.png" />
 
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2314110E'/%3E%3Cpath d='M8 23 L24 9' stroke='%23C8452F' stroke-width='4.5' stroke-linecap='round'/%3E%3C/svg%3E" />
+  <link rel="apple-touch-icon" href="/static/apple-touch-icon.png" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3YRCXQL242"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-3YRCXQL242');
+  </script>
 
   <style>
     :root {
@@ -133,6 +163,27 @@
       padding-top: 3em;
     }
 
+    .cta {
+      margin: clamp(1.5rem, 4vw, 2.25rem) 0 0;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .cta a {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid currentColor;
+      padding-bottom: 0.25em;
+      transition: opacity 0.15s ease;
+    }
+
+    .cta a:hover,
+    .cta a:focus-visible {
+      opacity: 0.7;
+    }
+
     footer {
       margin-top: clamp(3rem, 9vw, 5.5rem);
       font-size: 0.75rem;
@@ -184,6 +235,16 @@
     </svg>
 
     <p class="statement">Something is being built here.</p>
+
+    <!-- rel="noopener" only. Do NOT add rel="noreferrer" — it strips the
+           Referer header, and that header is the only thing that makes these
+           visits show up as "External -> motoproponent.com" in YouTube Studio.
+           Same reason nginx.conf keeps Referrer-Policy permissive. -->
+    <p class="cta">
+      <a href="https://www.youtube.com/@motoproponent" target="_blank" rel="noopener">
+        Watch on YouTube
+      </a>
+    </p>
   </main>
 
   <footer>motoproponent.com</footer>

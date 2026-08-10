@@ -3,5 +3,11 @@
 # add the SCSS build stage the way fuckpicrights.com does it.
 FROM nginx:1.27-alpine
 COPY nginx.conf /etc/nginx/conf.d/default.conf
-COPY index.html robots.txt /usr/share/nginx/html/
+
+# Copy the whole webroot, never a list of filenames. Enumerating files here is
+# how you ship a build that succeeds, deploys, passes its health check, and
+# 404s on the one asset you just added. Everything public lives in site/ —
+# which also dodges .dockerignore, since assets/ and docs/ are excluded from
+# the build context and a COPY from either would hard-fail.
+COPY site/ /usr/share/nginx/html/
 EXPOSE 80
