@@ -53,7 +53,7 @@ The PR description says, in plain language, what changed and why, and confirms `
 
 ### Sending the change to Ziad: zip (fallback)
 
-If GitHub sign-in is too much, download the current site from <https://github.com/feralcreative/motoproponent/archive/refs/heads/main.zip> and unzip it. Always start from a fresh download, never from an older copy. Work only in `public/` under the rules above, run the check, then zip the whole `public/` folder and have Jeffrey email it to Ziad with a sentence on what changed.
+If GitHub sign-in is too much, get the latest `main` without an account: `git clone https://github.com/feralcreative/motoproponent.git` (or `git pull` in an existing clone), or download <https://github.com/feralcreative/motoproponent/archive/refs/heads/main.zip>. Always start from the latest `main`, never from an older copy. Work only in `public/` under the rules above, run the check, then zip the whole `public/` folder and have Jeffrey email it to Ziad with a sentence on what changed.
 
 ## Commands
 
