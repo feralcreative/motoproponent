@@ -288,7 +288,37 @@ Overlaps blend rather than one layer simply hiding the other: **multiply** on a 
 
 <!--| PAGE-BREAK -->
 
-## 11. Suggested next steps
+## 11. Beyond the ambigram — the concept studies
+
+`motoproponent-concepts-generator.py` chases the same goal — readable from more than one direction — but solves it at the **arrangement** level rather than the letterform level. Nothing is distorted, so nothing is compromised, and none of the legibility ceiling in §4 applies.
+
+| Concept | Idea | Why it can't fail |
+| --- | --- | --- |
+| `wheel` | Word repeated N times around a circle | N-fold symmetric: turned any way, a copy is upright |
+| `column` | `MOTO` stacked vertically | `M`, `O`, `T`, `O` are each mirror-symmetric, and stacking preserves their order under reflection — a **true** mirror ambigram with zero stylisation |
+| `card` | Word plus its own 180° twin on a centre rule | Both orientations are actually printed |
+| `hidden` | `MOTO · PRO · ONE` surfaced by weight or colour | Not a direction trick at all — a second reading already inside the name |
+
+```bash
+python3 motoproponent-concepts-generator.py           # all four, sequential
+python3 motoproponent-concepts-generator.py wheel     # just one
+python3 motoproponent-concepts-generator.py card 12   # force study-012
+```
+
+These write into the **same** numbered series as the ambigram sheets, so the whole exploration stays in one chronological run.
+
+Letterforms in these studies are placeholder system type. Every character is positioned individually on a fixed advance, so the *layout* is font-independent even though the shapes are not — point `FONT` at the real brand face and nothing shifts.
+
+Structural facts about the name, surfaced by the `hidden` study:
+
+- It splits exactly as **MOTO + PROPONENT** (4 + 9).
+- **MOTO** (1–4), **PRO** (5–7) and **ONE** (9–11) sit in order and do not overlap.
+- **TOP**, **PROP** and **PROPONENT** are in there too, but overlap the above — only one of that cluster can be lit at a time.
+- **OPO** (7–9) is a palindrome, and sits at the word's rotational centre.
+
+<!--| PAGE-BREAK -->
+
+## 12. Suggested next steps
 
 1. Decide whether the legibility ceiling in §4 is acceptable. If it is not, the realistic alternatives are a different typographic vernacular (blackletter or vintage brush script — both far more forgiving vehicles, and both more idiomatic to motorcycle culture than a geometric sans) or a shorter ambigram with `MOTOPROPONENT` set as ordinary type.
 2. Attempt the different-boundaries idea at the end of §4 on the `M/T` pair specifically, since the final `T` is the weakest reading in the mark.
