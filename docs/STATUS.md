@@ -1,6 +1,6 @@
 # Status — as of 2026-08-09
 
-Working state and open threads. Companion to [\_AI_AGENT_PRIMER.md](../_AI_AGENT_PRIMER.md), which is the stable reference; this file is the volatile one. Update it at the end of each session.
+Working state and open threads. Companion to [AGENTS.md](../AGENTS.md), which is the stable reference; this file is the volatile one. Update it at the end of each session.
 
 ## Where things stand
 
@@ -8,13 +8,13 @@ Branch `feat/logo`, working tree clean, HEAD `c0ebc9d`. Two workstreams ran in p
 
 **Site and SEO groundwork — done and committed, not deployed.** The holding page, nginx config, webroot restructure, GA4, canonical host and crawl setup are all finished. Nothing has been pushed to the NAS this session.
 
-**Logo — active. Lowercase direction, study 003, presented to the client.** The uppercase direction is abandoned; see the primer §8 for why the metric system makes lowercase work.
+**Logo — active. Lowercase direction, study 003, presented to the client.** The uppercase direction is abandoned; see [architecture.md](architecture.md) for why the metric system makes lowercase work.
 
 ## Deploy state
 
 The site has **not** been deployed since this work landed. Two things block a clean run:
 
-- `prod.sh` gates on branch `main` ([prod.sh:98](../utils/deploy/prod.sh#L98)) and the work is on `feat/logo`. Merge first, or pass `--force`.
+- `prod.sh` gates on branch `main` and a clean tree. Merge PR #1, then deploy from a clean worktree of `main`; never `--force`.
 - Public reachability also needs the Cloudflare Tunnel route, which is a dashboard action, not something `prod.sh` does. Check [nas-setup.md §3](nas-setup.md) before assuming the deploy is what is broken if the URL 404s.
 
 **Verified 2026-08-10: the tunnel route exists and works.** Apex returns 200, `www` returns 301. That question is closed; do not re-litigate it.
@@ -79,7 +79,7 @@ Not yet done. Every day of delay is a day of history permanently lost.
 
 ## Known stale in-repo
 
-Flagged in full in the primer §10. The short version: `assets/logos/README.md` and the "The ambigram" section of the root `README.md` both still describe the abandoned uppercase direction, and `motoproponent-duotone-generator.py` was left mid-edit and never re-run. None of it blocks anything; all of it will mislead an agent that trusts it.
+`assets/logos/README.md` still describes the abandoned uppercase direction, and `motoproponent-duotone-generator.py` was left mid-edit and never re-run. None of it blocks anything; all of it will mislead an agent that trusts it.
 
 ## Suggested next actions
 
