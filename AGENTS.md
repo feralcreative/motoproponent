@@ -97,7 +97,7 @@ No test suite exists; do not invent one.
 ## Prohibitions
 
 - Never deploy. `prod.sh` is run by the user; the auto-mode classifier blocks it anyway. Hand over the command.
-- Never pass `--force` to `prod.sh` to get past the dirty-tree or off-`main` gate. Deploy from a clean checkout of `main` (a `git worktree` works).
+- Never create a git worktree or a second checkout of this repo, for deploys or anything else. If `prod.sh` refuses a dirty tree, commit the changes, or hand the user `./utils/deploy/prod.sh --force` to run.
 - Maintainer: never push or open PRs without being asked. Contributor PRs follow the section at the top.
 - Never change Cloudflare DNS, Tunnel routes, or Redirect Rules without the user's written permission for that specific change.
 - Never add `rel="noreferrer"` to outbound links or tighten `Referrer-Policy` in `nginx.conf`. See [docs/decisions.md](docs/decisions.md).
@@ -142,7 +142,7 @@ Depth: [docs/architecture.md](docs/architecture.md), [docs/deployment.md](docs/d
 2. **`.gitignore` ignores `*.zip`**, so `assets/from-client/motoproponent_placeholder_website.zip` is local only. The extracted folder is the tracked copy.
 3. **`.dockerignore` excludes `assets/`, `docs/`, `utils/`, and `*.md`.** A `COPY` from any of them fails the build. Anything public must be in `public/`.
 4. **Deploying does not make the site reachable.** The Tunnel route and all Cloudflare settings are dashboard state, recorded in [docs/nas-setup.md](docs/nas-setup.md).
-5. **The user's main checkout often has uncommitted logo work.** `prod.sh` refuses a dirty tree. Deploy from a separate clean worktree of `main`.
+5. **The user's checkout often has uncommitted logo work.** `prod.sh` refuses a dirty tree. Commit it first, or hand over the `--force` command; never work around it with a worktree.
 6. **File extensions lie.** Jeffrey's `instagram-photo.webp` was JPEG bytes; it ships as `.jpg`. Check with `file` before adding images.
 7. **SVG ids are document-global.** Inlining two study sheets in one HTML page makes the second `<use>` render the first mark. `build-presentation.py` namespaces each instance (`instance()`).
 8. **CSS does not reliably restyle `<use>` shadow content.** Strip baked `stroke` attributes (`strip_stroke()`) and colour the `<use>` element instead.
