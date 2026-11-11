@@ -10,13 +10,13 @@ cd /path/to/clean/checkout/of/main
 ./utils/deploy/prod.sh
 ```
 
-Type `yes` at the prompt and approve Touch ID for the 1Password SSH agent. If the main checkout is dirty, deploy from a worktree: `git worktree add ../motoproponent-deploy main`.
+Type `yes` at the prompt and approve Touch ID for the 1Password SSH agent. If the tree is dirty, commit the changes first, or the user runs `./utils/deploy/prod.sh --force`. Never deploy from a worktree or second checkout.
 
 ## Stages
 
 | Stage | Behaviour |
 | --- | --- |
-| Flags | `--dry-run` previews every step and touches nothing; `--force` skips the safety gates (do not use); `--help` |
+| Flags | `--dry-run` previews every step and touches nothing; `--force` skips the safety gates (the user runs it when the tree is knowingly dirty); `--help` |
 | `.env` | Sourced if present; none exists |
 | SSH key | `SSH_KEY_PATH`, then `id_ed25519`, then `id_rsa`, then the agent; the agent normally wins |
 | Safety gates | Clean working tree and branch `main`, unless `--force` |
