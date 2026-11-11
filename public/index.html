@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Motoproponent</title>
+
+  <!-- Description copy is Jeffrey's own, from the YouTube channel description,
+         lightly tidied ("enthusiast that" → "who"). Client-approved wording —
+         do not rewrite it for keywords. In prose the name is always
+         "Motoproponent": one initial cap, never MOTOPROPONENT, never
+         MotoProponent. That rule governs copy only; the page body is
+         Jeffrey's own design (2026-11-11) and is kept as he wrote it. -->
+  <meta name="description" content="Motoproponent is a San Francisco electric motorcycle enthusiast who also rides a gas bike. Get inside the helmet for commuting, vlogs, day trips, road trips and general bike life." />
+
+  <!-- Holding page: keep it out of the index until there is something worth
+         indexing. Note the ordering trap — robots.txt says "Allow: /" on purpose.
+         Blocking the crawl would stop Google from ever READING this noindex,
+         which is how a bare, snippet-less URL ends up stuck in the index.
+         Crawlable + noindex is the configuration that actually keeps you out.
+         When the real site ships, remove this tag AND the X-Robots-Tag header in
+         nginx.conf AND add the Sitemap: line to robots.txt, in one deploy. -->
+  <meta name="robots" content="noindex, nofollow" />
+
+  <!-- Self-referencing. Must exist before the first UTM-tagged inbound link
+         does, or /?utm_source=youtube becomes a crawlable duplicate of /. -->
+  <link rel="canonical" href="https://motoproponent.com/" />
+
+  <meta name="theme-color" content="#101214" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Motoproponent" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:title" content="Motoproponent" />
+  <!-- This is the string that renders when the URL is pasted into iMessage,
+         Discord, Slack or a YouTube comment, which is the only way anyone
+         reaches this page right now. It earns more care than the search-facing
+         description, which is inert while the page is noindex. -->
+  <meta property="og:description" content="Get inside the helmet—commuting, vlogs, day trips, road trips and general bike life from a San Francisco electric motorcycle rider who also has a gas bike." />
+  <meta property="og:url" content="https://motoproponent.com/" />
+  <meta property="og:image" content="https://motoproponent.com/static/og-20261111.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Motoproponent" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Motoproponent" />
+  <meta name="twitter:description" content="Get inside the helmet—commuting, vlogs, day trips, road trips and general bike life from a San Francisco electric motorcycle rider who also has a gas bike." />
+  <meta name="twitter:image" content="https://motoproponent.com/static/og-20261111.png" />
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2314110E'/%3E%3Cpath d='M8 23 L24 9' stroke='%23C8452F' stroke-width='4.5' stroke-linecap='round'/%3E%3C/svg%3E" />
+  <link rel="apple-touch-icon" href="/static/apple-touch-icon.png" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3YRCXQL242"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-3YRCXQL242');
+  </script>
+
+  <!-- Person schema. Motoproponent is one man under a name, not an
+         Organization — Person is the correct type and switching it to
+         Organization later would break the entity, not upgrade it.
+
+         INERT UNTIL LAUNCH. Google discards structured data on a noindex page,
+         so this earns nothing today. It ships now so the entity, the sameAs
+         links and the e-mail are already correct on the deploy that removes
+         noindex, rather than being an afterthought on launch day. See the
+         launch checklist in _AI_AGENT_PRIMER.md §6.
+
+         sameAs is the load-bearing part: it is what ties this domain to the
+         channel and the Instagram account as one identity. Both URLs must
+         resolve — a 404 in sameAs is worse than omitting it.
+
+         The Instagram handle is "m0t0pr0p0nent" with LITERAL ZEROS (verified
+         live 2026-11-11). It is not a typo; @motoproponent was taken. Never
+         normalise it. -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "@id": "https://motoproponent.com/#person",
+      "name": "Motoproponent",
+      "url": "https://motoproponent.com/",
+      "description": "Motoproponent is a San Francisco electric motorcycle enthusiast who also rides a gas bike. Get inside the helmet for commuting, vlogs, day trips, road trips and general bike life.",
+      "email": "mailto:motoproponent@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressRegion": "CA",
+        "addressCountry": "US"
+      },
+      "knowsAbout": [
+        "Electric motorcycles",
+        "Motorcycle commuting",
+        "Motorcycle touring"
+      ],
+      "sameAs": [
+        "https://www.youtube.com/@motoproponent",
+        "https://www.instagram.com/m0t0pr0p0nent/"
+      ]
+    }
+  </script>
+
+  <style>
+    :root { color-scheme: dark; --accent: #e8a52b; }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; min-height: 100%; }
+    body {
+      min-height: 100vh;
+      min-height: 100svh;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: #fff;
+      background: #101214 url("assets/background.jpg") center 38% / cover fixed no-repeat;
+      display: grid;
+      place-items: center;
+      position: relative;
+      padding: 36px 20px;
+    }
+    body::before {
+      content: "";
+      position: fixed; inset: 0;
+      background: linear-gradient(90deg, rgba(0,0,0,.60), rgba(0,0,0,.18) 58%, rgba(0,0,0,.38)),
+                  linear-gradient(0deg, rgba(0,0,0,.68), transparent 65%);
+      pointer-events: none;
+    }
+    main {
+      position: relative; z-index: 1; width: min(920px, 100%);
+      text-align: center; padding: 28px 0;
+    }
+    .eyebrow {
+      margin: 0 0 10px; color: #e9e9e9; letter-spacing: .28em;
+      text-transform: uppercase; font-size: .76rem; font-weight: 650;
+    }
+    h1 {
+      margin: 0; font-size: clamp(2.6rem, 8vw, 5.6rem);
+      line-height: .98; letter-spacing: .045em; font-weight: 850;
+      text-shadow: 0 4px 24px rgba(0,0,0,.55);
+    }
+    .tagline {
+      margin: 16px 0 34px; color: rgba(255,255,255,.88);
+      font-size: clamp(1rem, 2.5vw, 1.2rem); letter-spacing: .04em;
+    }
+    .links {
+      display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px; width: min(720px, 100%); margin: 0 auto;
+    }
+    .social-card {
+      display: block; position: relative; overflow: hidden; aspect-ratio: 4 / 3;
+      border: 1px solid rgba(255,255,255,.52); border-radius: 14px;
+      color: white; text-decoration: none; background: #202326;
+      box-shadow: 0 12px 36px rgba(0,0,0,.35);
+      isolation: isolate; transition: transform .2s ease, border-color .2s ease;
+    }
+    .social-card:hover, .social-card:focus-visible {
+      transform: translateY(-4px); border-color: var(--accent); outline: none;
+    }
+    .social-card img {
+      position: absolute; inset: 0; width: 100%; height: 100%;
+      object-fit: cover; z-index: -2; transition: transform .35s ease;
+    }
+    .social-card:hover img { transform: scale(1.045); }
+    .social-card::after {
+      content: ""; position: absolute; inset: 0; z-index: -1;
+      background: linear-gradient(0deg, rgba(0,0,0,.86), rgba(0,0,0,.06) 78%);
+    }
+    .card-label {
+      position: absolute; left: 18px; right: 18px; bottom: 17px;
+      display: flex; align-items: center; justify-content: center; gap: 10px;
+      font-size: clamp(1rem, 2.8vw, 1.25rem); font-weight: 750;
+      letter-spacing: .12em; text-transform: uppercase;
+      text-shadow: 0 2px 8px rgba(0,0,0,.8);
+    }
+    .card-label svg { width: 27px; height: 27px; flex: 0 0 auto; fill: currentColor; }
+    footer { margin-top: 30px; color: rgba(255,255,255,.68); font-size: .78rem; letter-spacing: .13em; }
+    @media (max-width: 560px) {
+      body { background-attachment: scroll; padding: 24px 16px; }
+      .links { gap: 12px; }
+      .social-card { aspect-ratio: 3 / 4; border-radius: 11px; }
+      .card-label { left: 8px; right: 8px; bottom: 13px; gap: 6px; letter-spacing: .07em; }
+      .card-label svg { width: 22px; height: 22px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="eyebrow">Ride • Explore • Repeat</p>
+    <h1>MOTOPROPONENT</h1>
+    <p class="tagline">The next adventure starts here.</p>
+
+    <!-- rel="noopener" only, never noreferrer: the Referer header is what
+         makes these visits show up as "External -> motoproponent.com" in
+         YouTube Studio. See the Referrer-Policy note in nginx.conf. -->
+    <nav class="links" aria-label="Social media">
+      <a class="social-card" href="https://www.youtube.com/@motoproponent"
+         target="_blank" rel="noopener" aria-label="Visit MotoProponent on YouTube">
+        <img src="assets/youtube-photo.jpg" alt="">
+        <span class="card-label">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.3 3.6-6.3 3.6Z"/></svg>
+          YouTube
+        </span>
+      </a>
+
+      <a class="social-card" href="https://www.instagram.com/m0t0pr0p0nent/"
+         target="_blank" rel="noopener" aria-label="Visit MotoProponent on Instagram">
+        <img src="assets/instagram-photo.jpg" alt="">
+        <span class="card-label">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2.1A2.9 2.9 0 0 0 4.1 7v10A2.9 2.9 0 0 0 7 19.9h10a2.9 2.9 0 0 0 2.9-2.9V7A2.9 2.9 0 0 0 17 4.1H7Zm5 2.4a5.5 5.5 0 1 1 0 11 5.5 5.5 0 0 1 0-11Zm0 2.1a3.4 3.4 0 1 0 0 6.8 3.4 3.4 0 0 0 0-6.8Zm5.8-3.2a1.3 1.3 0 1 1 0 2.6 1.3 1.3 0 0 1 0-2.6Z"/></svg>
+          Instagram
+        </span>
+      </a>
+    </nav>
+    <footer>MORE COMING SOON</footer>
+  </main>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="2102" height="2471" viewBox="0 0 2102 2471"><rect width="2102" height="2471" fill="#FAF8F5"/><defs><g id="half-final">
+<path d="M-16,140 H1142" fill="none" stroke="#14110E" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M11,140 V76 Q11,46 48.5,46 Q86.0,46 86.0,76 V140" fill="none" stroke="#14110E" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M86.0,76 Q86.0,46 123.5,46 Q161,46 161,76 V170" fill="none" stroke="#14110E" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M243.0,46 H251.0 Q221.0,46 221.0,76 V94 Q221.0,124 251.0,124 H287.0 Q317.0,124 317.0,94 V76 Q317.0,46 287.0,46 H295.0" fill="none" stroke="#14110E" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M415.0,34 V140" fill="none" stroke="#14110E" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M388.0,85 H442.0" fill="none" stroke="#14110E" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M415.0,140 Q457.0,140 457.0,82" fill="none" stroke="#14110E" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M535.0,46 H543.0 Q513.0,46 513.0,76 V94 Q513.0,124 543.0,124 H579.0 Q609.0,124 609.0,94 V76 Q609.0,46 579.0,46 H587.0" fill="none" stroke="#14110E" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M669,34 V156" fill="none" stroke="#14110E" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M669,46 H740 Q763,46 763,72 V98 Q763,124 740,124 H669" fill="none" stroke="#14110E" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M823,16 V154" fill="none" stroke="#14110E" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M823,80 Q823,46 880,46 Q899,46 899,76 V91" fill="none" stroke="#14110E" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M981.0,46 H989.0 Q959.0,46 959.0,76 V94 Q959.0,124 989.0,124 H1025.0 Q1055.0,124 1055.0,94 V76 Q1055.0,46 1025.0,46 H1033.0" fill="none" stroke="#14110E" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+</g><g id="half-diag">
+<path d="M-16,140 H1142" fill="none" stroke="#C8452F" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M11,140 V76 Q11,46 48.5,46 Q86.0,46 86.0,76 V140" fill="none" stroke="#14110E" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M86.0,76 Q86.0,46 123.5,46 Q161,46 161,76 V170" fill="none" stroke="#14110E" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M243.0,46 H251.0 Q221.0,46 221.0,76 V94 Q221.0,124 251.0,124 H287.0 Q317.0,124 317.0,94 V76 Q317.0,46 287.0,46 H295.0" fill="none" stroke="#14110E" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M415.0,34 V140" fill="none" stroke="#14110E" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M388.0,85 H442.0" fill="none" stroke="#14110E" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M415.0,140 Q457.0,140 457.0,82" fill="none" stroke="#14110E" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M535.0,46 H543.0 Q513.0,46 513.0,76 V94 Q513.0,124 543.0,124 H579.0 Q609.0,124 609.0,94 V76 Q609.0,46 579.0,46 H587.0" fill="none" stroke="#14110E" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M669,34 V156" fill="none" stroke="#14110E" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M669,46 H740 Q763,46 763,72 V98 Q763,124 740,124 H669" fill="none" stroke="#14110E" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M823,16 V154" fill="none" stroke="#14110E" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M823,80 Q823,46 880,46 Q899,46 899,76 V91" fill="none" stroke="#14110E" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M981.0,46 H989.0 Q959.0,46 959.0,76 V94 Q959.0,124 989.0,124 H1025.0 Q1055.0,124 1055.0,94 V76 Q1055.0,46 1025.0,46 H1033.0" fill="none" stroke="#14110E" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+</g><g id="half-paint">
+<path d="M-16,140 H1142" fill="none" stroke="#F2EDE6" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M11,140 V76 Q11,46 48.5,46 Q86.0,46 86.0,76 V140" fill="none" stroke="#F2EDE6" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M86.0,76 Q86.0,46 123.5,46 Q161,46 161,76 V170" fill="none" stroke="#F2EDE6" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M243.0,46 H251.0 Q221.0,46 221.0,76 V94 Q221.0,124 251.0,124 H287.0 Q317.0,124 317.0,94 V76 Q317.0,46 287.0,46 H295.0" fill="none" stroke="#F2EDE6" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M415.0,34 V140" fill="none" stroke="#F2EDE6" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M388.0,85 H442.0" fill="none" stroke="#F2EDE6" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M415.0,140 Q457.0,140 457.0,82" fill="none" stroke="#F2EDE6" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M535.0,46 H543.0 Q513.0,46 513.0,76 V94 Q513.0,124 543.0,124 H579.0 Q609.0,124 609.0,94 V76 Q609.0,46 579.0,46 H587.0" fill="none" stroke="#F2EDE6" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M669,34 V156" fill="none" stroke="#F2EDE6" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M669,46 H740 Q763,46 763,72 V98 Q763,124 740,124 H669" fill="none" stroke="#F2EDE6" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M823,16 V154" fill="none" stroke="#F2EDE6" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M823,80 Q823,46 880,46 Q899,46 899,76 V91" fill="none" stroke="#F2EDE6" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M981.0,46 H989.0 Q959.0,46 959.0,76 V94 Q959.0,124 989.0,124 H1025.0 Q1055.0,124 1055.0,94 V76 Q1055.0,46 1025.0,46 H1033.0" fill="none" stroke="#F2EDE6" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+</g><g id="round-final">
+<path d="M33.0,46 H41.0 Q11.0,46 11.0,76 V94 Q11.0,124 41.0,124 H77.0 Q107.0,124 107.0,94 V76 Q107.0,46 77.0,46 H85.0" fill="none" stroke="#14110E" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+</g><g id="round-paint">
+<path d="M33.0,46 H41.0 Q11.0,46 11.0,76 V94 Q11.0,124 41.0,124 H77.0 Q107.0,124 107.0,94 V76 Q107.0,46 77.0,46 H85.0" fill="none" stroke="#F2EDE6" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+</g><g id="line-straight">
+<path d="M0,85 H1007.0" fill="none" stroke="#C8452F" stroke-width="16" stroke-linecap="butt"/>
+</g><g id="round-line">
+<path d="M-14,85 H132" fill="none" stroke="#C8452F" stroke-width="16" stroke-linecap="butt"/>
+</g></defs><text x="44" y="58" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="30" fill="#14110E" text-anchor="start" font-weight="700" letter-spacing="0.28em">motoproponent</text>
+<text x="44" y="84" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="12" fill="#8E8880" text-anchor="start" font-weight="400" letter-spacing="0.14em">180&#176; ROTATIONAL AMBIGRAM &#8212; LOWERCASE, STUDY 003</text>
+<text x="44" y="104" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="12" fill="#8E8880" text-anchor="start" font-weight="400" letter-spacing="0.14em">50/50 glyphs &#183; heavier monoline &#183; rules owned by the m &#183; pivot-o roundel as tier two</text>
+<text x="44" y="150" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="12" fill="#14110E" text-anchor="start" font-weight="700" letter-spacing="0.14em">THE MARK &#8212; STRUCTURE ONLY</text>
+<text x="44" y="168" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="11" fill="#8E8880" text-anchor="start" font-weight="400" letter-spacing="0.14em">the m's foot bar, extended &#8212; rotated it is the final t's crossbar. the rules stop past the pivot, so they overlap through the centre instead of closing a box</text>
+<g transform="translate(44,200)"><use xlink:href="#half-final"/><use xlink:href="#half-final" transform="rotate(180,1007.0,85)"/></g>
+<text x="44" y="430" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="12" fill="#14110E" text-anchor="start" font-weight="700" letter-spacing="0.14em">WITH THE COLOUR CENTRE LINE</text>
+<text x="44" y="448" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="11" fill="#8E8880" text-anchor="start" font-weight="400" letter-spacing="0.14em">at mid-height it maps onto itself and is simultaneously the t's crossbar and the e's middle bar &#8212; the thing caps could not do</text>
+<g transform="translate(44,480)"><use xlink:href="#half-final"/><use xlink:href="#half-final" transform="rotate(180,1007.0,85)"/><use xlink:href="#line-straight"/><use xlink:href="#line-straight" transform="rotate(180,1007.0,85)"/></g>
+<text x="44" y="710" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="12" fill="#14110E" text-anchor="start" font-weight="700" letter-spacing="0.14em">ROTATED 180&#176; &#8212; THE 50/50 TEST</text>
+<text x="44" y="728" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="11" fill="#8E8880" text-anchor="start" font-weight="400" letter-spacing="0.14em">identical to the row above, pixel for pixel. the point of this pass: neither orientation should look like the wrong side</text>
+<g transform="translate(44,760) rotate(180,1007.0,85)"><use xlink:href="#half-final"/><use xlink:href="#half-final" transform="rotate(180,1007.0,85)"/><use xlink:href="#line-straight"/><use xlink:href="#line-straight" transform="rotate(180,1007.0,85)"/></g>
+<text x="44" y="990" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="12" fill="#14110E" text-anchor="start" font-weight="700" letter-spacing="0.14em">WHAT IS ACTUALLY DRAWN</text>
+<text x="44" y="1008" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="11" fill="#8E8880" text-anchor="start" font-weight="400" letter-spacing="0.14em">only the left half and the pivot o are authored; the right half is this, rotated. symmetry is by construction, not by eye</text>
+<g transform="translate(44,1040)"><use xlink:href="#half-diag"/></g>
+<text x="44" y="1270" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="12" fill="#14110E" text-anchor="start" font-weight="700" letter-spacing="0.14em">TIER TWO &#8212; THE ROUNDEL</text>
+<text x="44" y="1288" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="11" fill="#8E8880" text-anchor="start" font-weight="400" letter-spacing="0.14em">the pivot o, cropped, with the colour line through it. the only fully closed letter in the mark, and the axis it rotates around</text>
+<g transform="translate(44,1316) scale(1.423728813559322) translate(26,-26)"><use xlink:href="#round-final"/><use xlink:href="#round-final" transform="rotate(180,59.0,85)"/><use xlink:href="#round-line"/></g>
+<text x="44" y="1504" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="10" fill="#8E8880" text-anchor="start" font-weight="400" letter-spacing="0.14em">168px</text>
+<g transform="translate(326.03389830508473,1316) scale(0.8135593220338984) translate(26,-26)"><use xlink:href="#round-final"/><use xlink:href="#round-final" transform="rotate(180,59.0,85)"/><use xlink:href="#round-line"/></g>
+<text x="326.03389830508473" y="1504" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="10" fill="#8E8880" text-anchor="start" font-weight="400" letter-spacing="0.14em">96px</text>
+<g transform="translate(504.33898305084745,1316) scale(0.4745762711864407) translate(26,-26)"><use xlink:href="#round-final"/><use xlink:href="#round-final" transform="rotate(180,59.0,85)"/><use xlink:href="#round-line"/></g>
+<text x="504.33898305084745" y="1504" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="10" fill="#8E8880" text-anchor="start" font-weight="400" letter-spacing="0.14em">56px</text>
+<g transform="translate(625.0169491525423,1316) scale(0.2711864406779661) translate(26,-26)"><use xlink:href="#round-final"/><use xlink:href="#round-final" transform="rotate(180,59.0,85)"/><use xlink:href="#round-line"/></g>
+<text x="625.0169491525423" y="1504" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="10" fill="#8E8880" text-anchor="start" font-weight="400" letter-spacing="0.14em">32px</text>
+<g transform="translate(711.1186440677966,1316) scale(0.13559322033898305) translate(26,-26)"><use xlink:href="#round-final"/><use xlink:href="#round-final" transform="rotate(180,59.0,85)"/><use xlink:href="#round-line"/></g>
+<text x="711.1186440677966" y="1504" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="10" fill="#8E8880" text-anchor="start" font-weight="400" letter-spacing="0.14em">16px</text>
+<rect x="794.1694915254237" y="1300" width="282.03389830508473" height="200" fill="#1B1B1D"/>
+<g transform="translate(814.1694915254237,1316) scale(1.423728813559322) translate(26,-26)"><use xlink:href="#round-paint"/><use xlink:href="#round-paint" transform="rotate(180,59.0,85)"/><use xlink:href="#round-line"/></g>
+<text x="794.1694915254237" y="1520" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="10" fill="#8E8880" text-anchor="start" font-weight="400" letter-spacing="0.14em">reversed</text>
+<text x="44" y="1560" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="12" fill="#14110E" text-anchor="start" font-weight="700" letter-spacing="0.14em">HELMET STRIPE</text>
+<text x="44" y="1578" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="11" fill="#8E8880" text-anchor="start" font-weight="400" letter-spacing="0.14em">the actual brief: painted down the crown it has to read the same from either side &#8212; second band is the first one rotated</text>
+<rect x="44" y="1604" width="926.44" height="134.2" fill="#1B1B1D"/>
+<g transform="translate(44,1632) scale(0.46)"><use xlink:href="#half-paint"/><use xlink:href="#half-paint" transform="rotate(180,1007.0,85)"/><use xlink:href="#line-straight"/><use xlink:href="#line-straight" transform="rotate(180,1007.0,85)"/></g>
+<text x="44" y="1756.2" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="10" fill="#8E8880" text-anchor="start" font-weight="400" letter-spacing="0.14em">left side</text>
+<rect x="44" y="1778.2" width="926.44" height="134.2" fill="#1B1B1D"/>
+<g transform="translate(44,1806.2) scale(0.46) rotate(180,1007.0,85)"><use xlink:href="#half-paint"/><use xlink:href="#half-paint" transform="rotate(180,1007.0,85)"/><use xlink:href="#line-straight"/><use xlink:href="#line-straight" transform="rotate(180,1007.0,85)"/></g>
+<text x="44" y="1930.4" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="10" fill="#8E8880" text-anchor="start" font-weight="400" letter-spacing="0.14em">right side &#8212; same artwork, rotated</text>
+<text x="44" y="1976.4" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="12" fill="#14110E" text-anchor="start" font-weight="700" letter-spacing="0.14em">SIZE TEST</text>
+<text x="44" y="1994.4" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="11" fill="#8E8880" text-anchor="start" font-weight="400" letter-spacing="0.14em">the wordmark is a stripe, not a logo &#8212; below about 400px it is texture, which is what tier two is for</text>
+<g transform="translate(44,2020.4) scale(0.4270109235352532)"><use xlink:href="#half-final"/><use xlink:href="#half-final" transform="rotate(180,1007.0,85)"/><use xlink:href="#line-straight"/><use xlink:href="#line-straight" transform="rotate(180,1007.0,85)"/></g>
+<text x="928" y="2065.4069513406157" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="10" fill="#8E8880" text-anchor="start" font-weight="400" letter-spacing="0.14em">860px wide</text>
+<g transform="translate(44,2118.991857000993) scale(0.22840119165839126)"><use xlink:href="#half-final"/><use xlink:href="#half-final" transform="rotate(180,1007.0,85)"/><use xlink:href="#line-straight"/><use xlink:href="#line-straight" transform="rotate(180,1007.0,85)"/></g>
+<text x="528" y="2143.0653426017875" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="10" fill="#8E8880" text-anchor="start" font-weight="400" letter-spacing="0.14em">460px wide</text>
+<g transform="translate(44,2183.82005958292) scale(0.12909632571996027)"><use xlink:href="#half-final"/><use xlink:href="#half-final" transform="rotate(180,1007.0,85)"/><use xlink:href="#line-straight"/><use xlink:href="#line-straight" transform="rotate(180,1007.0,85)"/></g>
+<text x="328" y="2197.4268123138036" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="10" fill="#8E8880" text-anchor="start" font-weight="400" letter-spacing="0.14em">260px wide</text>
+<line x1="44" y1="2261.766434955313" x2="2058" y2="2261.766434955313" stroke="#DCD7CF"/>
+<text x="44" y="2289.766434955313" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="12" fill="#14110E" text-anchor="start" font-weight="700" letter-spacing="0.14em">NOTES</text>
+<text x="44" y="2311.766434955313" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="11" fill="#8E8880" text-anchor="start" font-weight="400" letter-spacing="0.14em">&#8226; 50/50 is the change that matters. Studies 000-002 optimised every glyph for its upright reading, which gave a crisp "motopro" and then mush. For an object read from both sides that means a good side and a bad side.</text>
+<text x="44" y="2331.766434955313" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="11" fill="#8E8880" text-anchor="start" font-weight="400" letter-spacing="0.14em">&#8226; The metric system is the design. XH and BASE are equidistant from MID, so the x-band maps onto itself; ASC and DESC likewise, so an ascender is a descender upside down. Caps have no spare vertical real estate and that is why they lost.</text>
+<text x="44" y="2351.766434955313" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="11" fill="#8E8880" text-anchor="start" font-weight="400" letter-spacing="0.14em">&#8226; The rules are no longer free-standing. The m owns a foot bar and that bar is what extends - rotated, it is the final t's crossbar. They also stop past the pivot, so top and bottom overlap through the centre rather than boxing the mark in.</text>
+<text x="44" y="2371.766434955313" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="11" fill="#8E8880" text-anchor="start" font-weight="400" letter-spacing="0.14em">&#8226; o/n is improved, not solved. The notch width has no winning value; what helps is giving the bowl straight sides, which sells the n and costs the o nothing.</text>
+<text x="44" y="2391.766434955313" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="11" fill="#8E8880" text-anchor="start" font-weight="400" letter-spacing="0.14em">&#8226; r/p is still impossible. r's arm and p's bowl both point right and rotation flips handedness. Balanced as far as it goes, but this pair does not resolve.</text>
+<text x="44" y="2411.766434955313" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="11" fill="#8E8880" text-anchor="start" font-weight="400" letter-spacing="0.14em">&#8226; Tier two exists because 13 symmetric letters is 13:1 - a stripe, not an avatar.</text></svg>

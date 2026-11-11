@@ -1,0 +1,21 @@
+# Crawling is ALLOWED on purpose, even though the site is noindex.
+#
+# robots.txt controls crawling; the noindex meta tag controls indexing. They are
+# not additive — combining them is strictly worse than either alone, because a
+# blocked crawler can never fetch the page to read the noindex, and a single
+# inbound link is then enough to get the bare URL listed with no title or
+# snippet. Crawlable + noindex is what actually keeps a page out.
+#
+# The same trap runs in reverse: to de-index something later, add noindex FIRST,
+# wait for the recrawl to be confirmed in Search Console, and only then add a
+# Disallow. Disallowing first freezes the URL in the index permanently.
+#
+# When the real site ships, in ONE deploy: drop the robots meta tag from
+# index.html, drop the X-Robots-Tag header from nginx.conf, add sitemap.xml, and
+# uncomment the Sitemap line below. Do not uncomment it before that file exists —
+# a Sitemap directive pointing at a 404 generates persistent Search Console errors.
+
+User-agent: *
+Allow: /
+
+# Sitemap: https://motoproponent.com/sitemap.xml
