@@ -65,7 +65,7 @@ Written in plain language at Ziad's instruction — Jeffrey is not a designer, s
 - **Styling:** governs **copy only**. The all-caps SVG wordmark and the lowercase ambigram are both unaffected — that was the initial misreading of the answer, and it is settled.
 - **Location:** San Francisco Bay Area. He writes "San Francisco based" in his own copy.
 - **E-mail:** `motoproponent@gmail.com` confirmed for public use. The pending default is now a real answer.
-- **Instagram:** `@M0t0pt0p0nent` — **literal zeros, and the letters differ from the name.** Not a typo; `@motoproponent` was already taken. Never normalise it.
+- **Instagram:** `@m0t0pr0p0nent` — **literal zeros, and the letters differ from the name.** Not a typo; `@motoproponent` was already taken. Never normalise it.
 
 His channel description is now live and mentions the domain, so that to-do is closed. It is recorded verbatim in `brand-decisions.md` and is the source of the site's new description copy.
 
