@@ -19,7 +19,6 @@ A static holding page for `motoproponent.com`, served from the Synology NAS behi
 | `utils/deploy/prod.sh` | Build, ship, and restart on the NAS                                                      |
 | `docs/nas-setup.md`    | One-time bringup, the Cloudflare Tunnel route, and all dashboard state                   |
 | `docs/.private/`       | Untracked — brand answers and open questions for Jeffrey                                 |
-| `assets/logos/`        | Ambigram studies and their generators (not part of the site)                             |
 
 The webroot is `public/`, not `site/`, because the boilerplate `.gitignore` ignores `site/` as MkDocs build output — which silently kept the static assets out of the repo.
 
@@ -39,6 +38,6 @@ Deploying only puts files on the NAS. Making the site publicly reachable also re
 
 The page is Jeffrey's own design, adopted as he delivered it on 2026-11-11 (original archived in `assets/from-client/`). Our `<head>` carries the canonical tag, `noindex`, social tags, GA4, and Person JSON-LD. See [docs/decisions.md](docs/decisions.md).
 
-## The logo
+## Contributing
 
-Logo exploration lives in `assets/logos/` and is not used on the site. See [docs/architecture.md](docs/architecture.md) for the lowercase ambigram and [assets/logos/README.md](assets/logos/README.md) for the other directions.
+Jeffrey (or his AI agent) works from a fork and opens a pull request; the rules are in the contributor section at the top of [AGENTS.md](AGENTS.md). Run `./utils/check-page.sh` before sending any change.
