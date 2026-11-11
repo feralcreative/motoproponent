@@ -6,6 +6,53 @@ Current state and open threads: [docs/STATUS.md](docs/STATUS.md). Read it before
 
 > When a change makes anything in this file inaccurate—a command, a path, a convention, a prohibition—update this file in the same change.
 
+## Who you are working for — read first
+
+Run `git config user.name`. If it is `Ziad Ezzat`, you are working for the **maintainer**: skip this section and follow the rest of this file. Anyone else—most likely Jeffrey—is a **contributor**: follow this section, and where it conflicts with anything below, this section wins. If `git` is not installed or the folder is not a git checkout, the user is a contributor.
+
+Jeffrey is the client, not a developer. Do all the technical work yourself, explain what you are doing in plain language, and never ask him to type commands, read diffs, or resolve git problems. If something technical goes wrong that you cannot fix, stop and tell him to ask Ziad.
+
+### What a contributor may change
+
+- `public/index.html`: the CSS inside the existing `<style>` element, and anything in `<body>`.
+- Images in `public/assets/`.
+- Nothing else. `nginx.conf`, `Dockerfile`, `docker-compose.yml`, `utils/`, `docs/`, `assets/logos/`, `robots.txt`, and this file belong to Ziad. If a request needs one of them, say so and leave it for Ziad.
+
+### Rules for every change
+
+1. **Edit the existing `public/index.html`. Never start a new page or replace the file.** Its `<head>` holds Google Analytics, search and link-preview tags, structured data, and icons that the site depends on; a fresh file silently loses all of them. Do not alter anything in `<head>` except the contents of the existing `<style>` element. If Jeffrey wants a head change (title, description, preview image), tell him to ask Ziad.
+2. Run `./utils/check-page.sh` after every edit. It must print `OK`. It locks the `<head>` by checksum: if it reports the head as changed, copy the `<head>` back from the latest `main` (keeping only your `<style>` edits) and run it again. Never edit `utils/head.sha256` or the script to make it pass.
+3. Open `public/index.html` in a browser and look at it at phone and desktop widths before calling the work done. Show Jeffrey a screenshot. Save screenshots outside the repo folder; never commit them.
+4. Keep it one self-contained HTML file: no frameworks, libraries, build tools, package managers, or extra JavaScript.
+5. Images: JPEG or WebP whose file extension matches the real format, under 300 KB each, and no wider than 2000px. Do not show readable licence plates or bystanders' faces unless Jeffrey says so.
+6. Links out use `rel="noopener"`, never `noreferrer`. YouTube is `https://www.youtube.com/@motoproponent`; Instagram is `https://www.instagram.com/m0t0pr0p0nent/` (zeros, not letters). Strip share tokens like `?si=` from pasted links.
+7. Never deploy, touch the server, or change Cloudflare or DNS. Ziad publishes the site.
+
+### Sending the change to Ziad: pull request (preferred)
+
+The repo is public, so Jeffrey needs only a free GitHub account; he does not need access to Ziad's copy. Install the GitHub CLI (`gh`) if it is missing, then run `gh auth login` and let Jeffrey finish the sign-in in his browser. After that:
+
+```bash
+gh repo fork feralcreative/motoproponent --clone
+cd motoproponent
+git switch -c fix/short-description
+```
+
+If you are already inside a git checkout of this repo, do not clone again inside it. Run `gh repo fork feralcreative/motoproponent --remote` there instead, which adds `upstream` and points `origin` at the fork, then `git fetch upstream && git switch -c fix/short-description upstream/main`. If the folder is an unzipped download (no `.git`), it cannot become a PR: run the fork-and-clone commands in a different folder, then copy the finished `public/` changes across.
+
+Use `feat/…` for something new and `fix/…` for a correction. Before each new piece of work, start a fresh branch from the latest `main` (`git switch main && git pull upstream main`). Commit with a plain-English message, then:
+
+```bash
+git push -u origin HEAD
+gh pr create --repo feralcreative/motoproponent --base main --attach '/path/outside/repo/screenshot.png#How the page looks now'
+```
+
+The PR description says, in plain language, what changed and why, and confirms `check-page.sh` printed `OK`. The screenshot goes in with `--attach`, not as a committed file. One change per PR. Never push to `main`, never merge your own PR, and never force-push.
+
+### Sending the change to Ziad: zip (fallback)
+
+If GitHub sign-in is too much, download the current site from <https://github.com/feralcreative/motoproponent/archive/refs/heads/main.zip> and unzip it. Always start from a fresh download, never from an older copy. Work only in `public/` under the rules above, run the check, then zip the whole `public/` folder and have Jeffrey email it to Ziad with a sentence on what changed.
+
 ## Commands
 
 No package manager, no install step, no tests, no linter, no CI.
@@ -19,6 +66,7 @@ No package manager, no install step, no tests, no linter, no CI.
 | Stop the test container | `docker rm -f $cid` |
 | Preview page without Docker | open `public/index.html` in a browser (relative asset paths work over `file://`) |
 | Screenshot page | `"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless=new --disable-gpu --hide-scrollbars --force-device-scale-factor=1 --window-size=1200,630 --screenshot=out.png "file://$PWD/public/index.html"` |
+| Check required tags and links | `./utils/check-page.sh` (or pass a path to check another copy) |
 | Deploy dry run | `./utils/deploy/prod.sh --dry-run` |
 | Deploy | `./utils/deploy/prod.sh` (user runs it; see Prohibitions) |
 | Public checks | `curl -sI https://motoproponent.com/` and `curl -sI https://www.motoproponent.com/` (expect 200 and 301) |
@@ -32,12 +80,15 @@ Logo generators are Python 3 stdlib only. `--window-size` must equal the SVG's d
 
 ## Definition of done
 
-1. `docker build` succeeds and the `ls -R` check lists every file you added under `public/`.
-2. `/`, every new asset, and `/subscribe` (302 to YouTube) answer correctly inside the container, with the right `Content-Type`.
-3. Security headers (`X-Content-Type-Options`, `X-Frame-Options`, `Referrer-Policy`, `X-Robots-Tag`) are present on `/` and `/index.html`.
-4. For page or logo changes: render it and look at the screenshot. Do not judge visuals from source.
-5. Codex has reviewed the diff (`codex exec -s read-only -m gpt-5.6-sol "<prompt>" < /dev/null`).
-6. `docs/STATUS.md` reflects what changed.
+Maintainer checklist; contributors follow "Rules for every change" above.
+
+1. `./utils/check-page.sh` prints `OK`.
+2. `docker build` succeeds and the `ls -R` check lists every file you added under `public/`.
+3. `/`, every new asset, and `/subscribe` (302 to YouTube) answer correctly inside the container, with the right `Content-Type`.
+4. Security headers (`X-Content-Type-Options`, `X-Frame-Options`, `Referrer-Policy`, `X-Robots-Tag`) are present on `/` and `/index.html`.
+5. For page or logo changes: render it and look at the screenshot. Do not judge visuals from source.
+6. Codex has reviewed the diff (`codex exec -s read-only -m gpt-5.6-sol "<prompt>" < /dev/null`).
+7. `docs/STATUS.md` reflects what changed.
 
 No test suite exists; do not invent one.
 
@@ -45,7 +96,7 @@ No test suite exists; do not invent one.
 
 - Never deploy. `prod.sh` is run by the user; the auto-mode classifier blocks it anyway. Hand over the command.
 - Never pass `--force` to `prod.sh` to get past the dirty-tree or off-`main` gate. Deploy from a clean checkout of `main` (a `git worktree` works).
-- Never push or open PRs without being asked.
+- Maintainer: never push or open PRs without being asked. Contributor PRs follow the section at the top.
 - Never change Cloudflare DNS, Tunnel routes, or Redirect Rules without the user's written permission for that specific change.
 - Never add `rel="noreferrer"` to outbound links or tighten `Referrer-Policy` in `nginx.conf`. See [docs/decisions.md](docs/decisions.md).
 - Never add an `add_header` to the `/index.html` or `/static/` locations in `nginx.conf`; use `expires` only. It silently strips the server-level security headers. (`/subscribe` has its own `add_header` on purpose; it returns before serving content.)
@@ -77,6 +128,7 @@ Depth: [docs/architecture.md](docs/architecture.md), [docs/deployment.md](docs/d
 
 - Copy says `Motoproponent`: one initial cap, never `MotoProponent` in new copy. Jeffrey's own body copy and his all-caps heading are kept as he wrote them.
 - Description copy is Jeffrey's approved wording from his channel description. Do not rewrite it for keywords.
+- Any change to `<head>` (outside `<style>`) must be followed by `./utils/check-page.sh --update` in the same commit, or every contributor check fails.
 - Files in `public/static/` are cached for a year: give a changed file a new name (e.g. `og-20261111.png`) and update every reference.
 - Utility scripts go in `utils/`, never `scripts/`. Cross-repo utilities go in `~/www/_code/utils`.
 - Docs go in `docs/`; only `README.md`, `AGENTS.md`, and the one-line `CLAUDE.md` live at the root. Plans go in `_PLANS/` (git-ignored).
@@ -103,6 +155,8 @@ Depth: [docs/architecture.md](docs/architecture.md), [docs/deployment.md](docs/d
 
 ## Credentials
 
+Maintainer only. A contributor has no credentials and needs none.
+
 Nothing in the repo is a secret and no `.env` exists (`prod.sh` sources one if present).
 
 | Item | Source | Notes |
@@ -116,7 +170,7 @@ Git-ignored and never to be read into a commit, log, or chat: `.env`, `docs/.pri
 
 ## Commit and PR conventions
 
-- Personal repo: commit on the user's behalf in logical blocks, without being asked. Pushing, PRs, and deploys need explicit permission.
+- Maintainer, personal repo: commit on the user's behalf in logical blocks, without being asked. Pushing, PRs, and deploys need explicit permission.
 - Conventional Commits: `type(scope): subject`, imperative. Types in use: `feat`, `fix`, `docs`, `chore`, `refactor`.
 - Branches: `type/kebab-subject` (e.g. `feat/client-placeholder`). PRs target `main`.
 - No AI attribution in commits or PR bodies, ever.
