@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101214">
+  <meta name="description" content="MotoProponent — follow along on YouTube and Instagram.">
+  <title>MotoProponent</title>
+  <style>
+    :root { color-scheme: dark; --accent: #e8a52b; }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; min-height: 100%; }
+    body {
+      min-height: 100vh;
+      min-height: 100svh;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: #fff;
+      background: #101214 url("assets/background.jpg") center 38% / cover fixed no-repeat;
+      display: grid;
+      place-items: center;
+      position: relative;
+      padding: 36px 20px;
+    }
+    body::before {
+      content: "";
+      position: fixed; inset: 0;
+      background: linear-gradient(90deg, rgba(0,0,0,.60), rgba(0,0,0,.18) 58%, rgba(0,0,0,.38)),
+                  linear-gradient(0deg, rgba(0,0,0,.68), transparent 65%);
+      pointer-events: none;
+    }
+    main {
+      position: relative; z-index: 1; width: min(920px, 100%);
+      text-align: center; padding: 28px 0;
+    }
+    .eyebrow {
+      margin: 0 0 10px; color: #e9e9e9; letter-spacing: .28em;
+      text-transform: uppercase; font-size: .76rem; font-weight: 650;
+    }
+    h1 {
+      margin: 0; font-size: clamp(2.6rem, 8vw, 5.6rem);
+      line-height: .98; letter-spacing: .045em; font-weight: 850;
+      text-shadow: 0 4px 24px rgba(0,0,0,.55);
+    }
+    .tagline {
+      margin: 16px 0 34px; color: rgba(255,255,255,.88);
+      font-size: clamp(1rem, 2.5vw, 1.2rem); letter-spacing: .04em;
+    }
+    .links {
+      display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px; width: min(720px, 100%); margin: 0 auto;
+    }
+    .social-card {
+      display: block; position: relative; overflow: hidden; aspect-ratio: 4 / 3;
+      border: 1px solid rgba(255,255,255,.52); border-radius: 14px;
+      color: white; text-decoration: none; background: #202326;
+      box-shadow: 0 12px 36px rgba(0,0,0,.35);
+      isolation: isolate; transition: transform .2s ease, border-color .2s ease;
+    }
+    .social-card:hover, .social-card:focus-visible {
+      transform: translateY(-4px); border-color: var(--accent); outline: none;
+    }
+    .social-card img {
+      position: absolute; inset: 0; width: 100%; height: 100%;
+      object-fit: cover; z-index: -2; transition: transform .35s ease;
+    }
+    .social-card:hover img { transform: scale(1.045); }
+    .social-card::after {
+      content: ""; position: absolute; inset: 0; z-index: -1;
+      background: linear-gradient(0deg, rgba(0,0,0,.86), rgba(0,0,0,.06) 78%);
+    }
+    .card-label {
+      position: absolute; left: 18px; right: 18px; bottom: 17px;
+      display: flex; align-items: center; justify-content: center; gap: 10px;
+      font-size: clamp(1rem, 2.8vw, 1.25rem); font-weight: 750;
+      letter-spacing: .12em; text-transform: uppercase;
+      text-shadow: 0 2px 8px rgba(0,0,0,.8);
+    }
+    .card-label svg { width: 27px; height: 27px; flex: 0 0 auto; fill: currentColor; }
+    footer { margin-top: 30px; color: rgba(255,255,255,.68); font-size: .78rem; letter-spacing: .13em; }
+    @media (max-width: 560px) {
+      body { background-attachment: scroll; padding: 24px 16px; }
+      .links { gap: 12px; }
+      .social-card { aspect-ratio: 3 / 4; border-radius: 11px; }
+      .card-label { left: 8px; right: 8px; bottom: 13px; gap: 6px; letter-spacing: .07em; }
+      .card-label svg { width: 22px; height: 22px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="eyebrow">Ride • Explore • Repeat</p>
+    <h1>MOTOPROPONENT</h1>
+    <p class="tagline">The next adventure starts here.</p>
+
+    <nav class="links" aria-label="Social media">
+      <a class="social-card" href="https://youtube.com/@motoproponent?si=tzYo2qJ0g9iC6fV6"
+         target="_blank" rel="noopener noreferrer" aria-label="Visit MotoProponent on YouTube">
+        <img src="assets/youtube-photo.jpg" alt="">
+        <span class="card-label">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.3 3.6-6.3 3.6Z"/></svg>
+          YouTube
+        </span>
+      </a>
+
+      <a class="social-card" href="https://www.instagram.com/m0t0pr0p0nent?srtk=Y3BoZjVicDdnbGxs"
+         target="_blank" rel="noopener noreferrer" aria-label="Visit MotoProponent on Instagram">
+        <img src="assets/instagram-photo.webp" alt="">
+        <span class="card-label">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2.1A2.9 2.9 0 0 0 4.1 7v10A2.9 2.9 0 0 0 7 19.9h10a2.9 2.9 0 0 0 2.9-2.9V7A2.9 2.9 0 0 0 17 4.1H7Zm5 2.4a5.5 5.5 0 1 1 0 11 5.5 5.5 0 0 1 0-11Zm0 2.1a3.4 3.4 0 1 0 0 6.8 3.4 3.4 0 0 0 0-6.8Zm5.8-3.2a1.3 1.3 0 1 1 0 2.6 1.3 1.3 0 0 1 0-2.6Z"/></svg>
+          Instagram
+        </span>
+      </a>
+    </nav>
+    <footer>MORE COMING SOON</footer>
+  </main>
+</body>
+</html>
